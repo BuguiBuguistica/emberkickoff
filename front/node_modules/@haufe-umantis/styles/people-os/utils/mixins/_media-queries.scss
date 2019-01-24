@@ -1,0 +1,27 @@
+/// Media Queries
+@mixin up($breakpoint, $orientation: null) {
+  @if $orientation {
+    $orientation: "and (orientation: #{$orientation})";
+  }
+  @media #{$screen} and (min-width: #{nth($breakpoint, 1)}) {
+    @content;
+  }
+}
+
+@mixin down($breakpoint, $orientation: null) {
+  @if $orientation {
+    $orientation: "and (orientation: #{$orientation})";
+  }
+  @media #{$screen} and (max-width: #{nth($breakpoint, 1) - 1px }) {
+    @content;
+  }
+}
+
+@mixin only($breakpoint, $orientation: null) {
+  @if $orientation {
+    $orientation: "and (orientation: #{$orientation})";
+  }
+  @media #{$screen} and (min-width: #{nth($breakpoint, 1)}) and (max-width: #{nth($range, 2)}) {
+    @content;
+  }
+}
