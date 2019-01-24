@@ -45,39 +45,6 @@
     }
   });
 });
-;define("front/components/x-alert", ["exports"], function (_exports) {
-  "use strict";
-
-  Object.defineProperty(_exports, "__esModule", {
-    value: true
-  });
-  _exports.default = void 0;
-
-  var _default = Ember.Component.extend({});
-
-  _exports.default = _default;
-});
-;define("front/components/x-counter", ["exports"], function (_exports) {
-  "use strict";
-
-  Object.defineProperty(_exports, "__esModule", {
-    value: true
-  });
-  _exports.default = void 0;
-
-  var _default = Ember.Component.extend({
-    number: 0,
-    actions: {
-      increment() {
-        let number = this.get('number');
-        this.set('number', number + 1);
-      }
-
-    }
-  });
-
-  _exports.default = _default;
-});
 ;define("front/controllers/application", ["exports"], function (_exports) {
   "use strict";
 
@@ -124,18 +91,6 @@
       }
     }
   });
-
-  _exports.default = _default;
-});
-;define("front/controllers/test", ["exports"], function (_exports) {
-  "use strict";
-
-  Object.defineProperty(_exports, "__esModule", {
-    value: true
-  });
-  _exports.default = void 0;
-
-  var _default = Ember.Controller.extend({});
 
   _exports.default = _default;
 });
@@ -701,18 +656,6 @@
   var _default = Router;
   _exports.default = _default;
 });
-;define("front/routes/abot", ["exports"], function (_exports) {
-  "use strict";
-
-  Object.defineProperty(_exports, "__esModule", {
-    value: true
-  });
-  _exports.default = void 0;
-
-  var _default = Ember.Route.extend({});
-
-  _exports.default = _default;
-});
 ;define("front/routes/conferences", ["exports"], function (_exports) {
   "use strict";
 
@@ -727,75 +670,6 @@
     //conferenceService: service(),
     model() {
       return this.get('conferenceService').getConferences();
-    }
-
-  });
-
-  _exports.default = _default;
-});
-;define("front/routes/parent", ["exports"], function (_exports) {
-  "use strict";
-
-  Object.defineProperty(_exports, "__esModule", {
-    value: true
-  });
-  _exports.default = void 0;
-
-  var _default = Ember.Route.extend({});
-
-  _exports.default = _default;
-});
-;define("front/routes/parent/child", ["exports"], function (_exports) {
-  "use strict";
-
-  Object.defineProperty(_exports, "__esModule", {
-    value: true
-  });
-  _exports.default = void 0;
-
-  var _default = Ember.Route.extend({});
-
-  _exports.default = _default;
-});
-;define("front/routes/todos", ["exports"], function (_exports) {
-  "use strict";
-
-  Object.defineProperty(_exports, "__esModule", {
-    value: true
-  });
-  _exports.default = void 0;
-
-  var _default = Ember.Route.extend({
-    model() {
-      return [{
-        id: '1',
-        description: 'Records'
-      }, {
-        id: '2',
-        description: 'Aalalal'
-      }];
-    }
-
-  });
-
-  _exports.default = _default;
-});
-;define("front/routes/todos/show", ["exports"], function (_exports) {
-  "use strict";
-
-  Object.defineProperty(_exports, "__esModule", {
-    value: true
-  });
-  _exports.default = void 0;
-
-  var _default = Ember.Route.extend({
-    model(params) {
-      if (params.id === '1') {
-        return {
-          id: '1',
-          description: 'record'
-        };
-      }
     }
 
   });
@@ -850,36 +724,6 @@
 
   _exports.default = _default;
 });
-;define("front/services/mystore", ["exports"], function (_exports) {
-  "use strict";
-
-  Object.defineProperty(_exports, "__esModule", {
-    value: true
-  });
-  _exports.default = void 0;
-
-  var _default = Ember.Service.extend({});
-
-  _exports.default = _default;
-});
-;define("front/templates/abot", ["exports"], function (_exports) {
-  "use strict";
-
-  Object.defineProperty(_exports, "__esModule", {
-    value: true
-  });
-  _exports.default = void 0;
-
-  var _default = Ember.HTMLBars.template({
-    "id": "G62tPMot",
-    "block": "{\"symbols\":[],\"statements\":[[0,\"About route\\n\"],[1,[21,\"outlet\"],false]],\"hasEval\":false}",
-    "meta": {
-      "moduleName": "front/templates/abot.hbs"
-    }
-  });
-
-  _exports.default = _default;
-});
 ;define("front/templates/application", ["exports"], function (_exports) {
   "use strict";
 
@@ -916,42 +760,6 @@
 
   _exports.default = _default;
 });
-;define("front/templates/components/x-alert", ["exports"], function (_exports) {
-  "use strict";
-
-  Object.defineProperty(_exports, "__esModule", {
-    value: true
-  });
-  _exports.default = void 0;
-
-  var _default = Ember.HTMLBars.template({
-    "id": "yR02nbRS",
-    "block": "{\"symbols\":[\"&default\"],\"statements\":[[7,\"button\"],[9],[0,\"Alert\"],[3,\"action\",[[22,0,[]],[23,[\"handleClick\"]],[23,[\"message\"]]]],[10],[0,\"\\n\"],[14,1]],\"hasEval\":false}",
-    "meta": {
-      "moduleName": "front/templates/components/x-alert.hbs"
-    }
-  });
-
-  _exports.default = _default;
-});
-;define("front/templates/components/x-counter", ["exports"], function (_exports) {
-  "use strict";
-
-  Object.defineProperty(_exports, "__esModule", {
-    value: true
-  });
-  _exports.default = void 0;
-
-  var _default = Ember.HTMLBars.template({
-    "id": "7hdHJoqX",
-    "block": "{\"symbols\":[\"&default\"],\"statements\":[[14,1],[0,\"\\n\"],[1,[21,\"number\"],false],[0,\"\\n\"],[7,\"button\"],[9],[0,\"Increment\"],[3,\"action\",[[22,0,[]],\"increment\"]],[10]],\"hasEval\":false}",
-    "meta": {
-      "moduleName": "front/templates/components/x-counter.hbs"
-    }
-  });
-
-  _exports.default = _default;
-});
 ;define("front/templates/conferences", ["exports"], function (_exports) {
   "use strict";
 
@@ -965,78 +773,6 @@
     "block": "{\"symbols\":[\"conference\"],\"statements\":[[4,\"each\",[[23,[\"model\"]]],null,{\"statements\":[[0,\"    \"],[4,\"if\",[[23,[\"show\"]]],null,{\"statements\":[[0,\" \"],[1,[27,\"conference-card\",null,[[\"item\"],[[22,1,[]]]]],false],[0,\" \"]],\"parameters\":[]},null],[0,\"\\n\"]],\"parameters\":[1]},null],[0,\"\\n\"],[1,[21,\"outlet\"],false]],\"hasEval\":false}",
     "meta": {
       "moduleName": "front/templates/conferences.hbs"
-    }
-  });
-
-  _exports.default = _default;
-});
-;define("front/templates/parent", ["exports"], function (_exports) {
-  "use strict";
-
-  Object.defineProperty(_exports, "__esModule", {
-    value: true
-  });
-  _exports.default = void 0;
-
-  var _default = Ember.HTMLBars.template({
-    "id": "ZRO7ZAi6",
-    "block": "{\"symbols\":[],\"statements\":[[0,\"Parent\\n\"],[4,\"link-to\",[\"parent.child\"],null,{\"statements\":[[0,\"Child\"]],\"parameters\":[]},null],[0,\"\\n\"],[1,[21,\"outlet\"],false]],\"hasEval\":false}",
-    "meta": {
-      "moduleName": "front/templates/parent.hbs"
-    }
-  });
-
-  _exports.default = _default;
-});
-;define("front/templates/parent/child", ["exports"], function (_exports) {
-  "use strict";
-
-  Object.defineProperty(_exports, "__esModule", {
-    value: true
-  });
-  _exports.default = void 0;
-
-  var _default = Ember.HTMLBars.template({
-    "id": "Id75vuUc",
-    "block": "{\"symbols\":[],\"statements\":[[0,\"\\nHello from child route\\n\"],[1,[21,\"outlet\"],false]],\"hasEval\":false}",
-    "meta": {
-      "moduleName": "front/templates/parent/child.hbs"
-    }
-  });
-
-  _exports.default = _default;
-});
-;define("front/templates/todos", ["exports"], function (_exports) {
-  "use strict";
-
-  Object.defineProperty(_exports, "__esModule", {
-    value: true
-  });
-  _exports.default = void 0;
-
-  var _default = Ember.HTMLBars.template({
-    "id": "rlOUiRIE",
-    "block": "{\"symbols\":[\"todo\"],\"statements\":[[7,\"h1\"],[9],[0,\"list of todos\"],[10],[0,\"\\n\"],[4,\"each\",[[23,[\"model\"]]],null,{\"statements\":[[0,\"\\t\"],[7,\"p\"],[9],[4,\"link-to\",[\"todos.show\",[22,1,[]]],null,{\"statements\":[[1,[22,1,[\"description\"]],false]],\"parameters\":[]},null],[10],[0,\"\\n\"]],\"parameters\":[1]},null],[1,[21,\"outlet\"],false],[0,\"\\n\"]],\"hasEval\":false}",
-    "meta": {
-      "moduleName": "front/templates/todos.hbs"
-    }
-  });
-
-  _exports.default = _default;
-});
-;define("front/templates/todos/show", ["exports"], function (_exports) {
-  "use strict";
-
-  Object.defineProperty(_exports, "__esModule", {
-    value: true
-  });
-  _exports.default = void 0;
-
-  var _default = Ember.HTMLBars.template({
-    "id": "0Jce9Cpq",
-    "block": "{\"symbols\":[],\"statements\":[[7,\"h1\"],[9],[0,\"In a detail view for todo\"],[10],[0,\"\\n\"],[1,[23,[\"model\",\"description\"]],false],[0,\"\\n\"],[1,[21,\"outlet\"],false]],\"hasEval\":false}",
-    "meta": {
-      "moduleName": "front/templates/todos/show.hbs"
     }
   });
 
