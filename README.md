@@ -1,0 +1,2 @@
+# emberkickoff
+Familiarise with ember
