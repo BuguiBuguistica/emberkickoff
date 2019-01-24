@@ -1,0 +1,8 @@
+<div class="card">
+  {{item.title}}
+  {{item.number_of_employees}}
+  {{moment-format item.conference_date 'MM-DD-YYYY'}}
+  {{item.head_of_opc.first_name}}{{item.head_of_opc.last_name}}
+  {{item.responsible_hr.first_name}}{{item.responsible_hr.last_name}}
+</div>
+{{yield}}

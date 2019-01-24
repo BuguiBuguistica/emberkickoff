@@ -1,0 +1,1706 @@
+@charset "UTF-8";
+@font-face {
+  font-family: "Avenir Next";
+  src: url("~@haufe-umantis/styles/assets/fonts/avenir-next/AvenirNextThin.eot");
+  src: url("~@haufe-umantis/styles/assets/fonts/avenir-next/AvenirNextThin.eot") format("eot"), url("~@haufe-umantis/styles/assets/fonts/avenir-next/AvenirNextThin.woff2") format("woff2"), url("~@haufe-umantis/styles/assets/fonts/avenir-next/AvenirNextThin.woff") format("woff"), url("~@haufe-umantis/styles/assets/fonts/avenir-next/AvenirNextThin.ttf") format("truetype"), url("~@haufe-umantis/styles/assets/fonts/avenir-next/AvenirNextThin.svg") format("svg");
+  font-weight: 200;
+}
+@font-face {
+  font-family: "Avenir Next";
+  src: url("~@haufe-umantis/styles/assets/fonts/avenir-next/AvenirNextThinItalic.eot");
+  src: url("~@haufe-umantis/styles/assets/fonts/avenir-next/AvenirNextThinItalic.eot") format("eot"), url("~@haufe-umantis/styles/assets/fonts/avenir-next/AvenirNextThinItalic.woff2") format("woff2"), url("~@haufe-umantis/styles/assets/fonts/avenir-next/AvenirNextThinItalic.woff") format("woff"), url("~@haufe-umantis/styles/assets/fonts/avenir-next/AvenirNextThinItalic.ttf") format("truetype"), url("~@haufe-umantis/styles/assets/fonts/avenir-next/AvenirNextThinItalic.svg") format("svg");
+  font-weight: 200;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Avenir Next";
+  src: url("~@haufe-umantis/styles/assets/fonts/avenir-next/AvenirNextLight.eot");
+  src: url("~@haufe-umantis/styles/assets/fonts/avenir-next/AvenirNextLight.eot") format("eot"), url("~@haufe-umantis/styles/assets/fonts/avenir-next/AvenirNextLight.woff2") format("woff2"), url("~@haufe-umantis/styles/assets/fonts/avenir-next/AvenirNextLight.woff") format("woff"), url("~@haufe-umantis/styles/assets/fonts/avenir-next/AvenirNextLight.ttf") format("truetype"), url("~@haufe-umantis/styles/assets/fonts/avenir-next/AvenirNextLight.svg") format("svg");
+  font-weight: 300;
+}
+@font-face {
+  font-family: "Avenir Next";
+  src: url("~@haufe-umantis/styles/assets/fonts/avenir-next/AvenirNextLightItalic.eot");
+  src: url("~@haufe-umantis/styles/assets/fonts/avenir-next/AvenirNextLightItalic.eot") format("eot"), url("~@haufe-umantis/styles/assets/fonts/avenir-next/AvenirNextLightItalic.woff2") format("woff2"), url("~@haufe-umantis/styles/assets/fonts/avenir-next/AvenirNextLightItalic.woff") format("woff"), url("~@haufe-umantis/styles/assets/fonts/avenir-next/AvenirNextLightItalic.ttf") format("truetype"), url("~@haufe-umantis/styles/assets/fonts/avenir-next/AvenirNextLightItalic.svg") format("svg");
+  font-weight: 300;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Avenir Next";
+  src: url("~@haufe-umantis/styles/assets/fonts/avenir-next/AvenirNextRegular.eot");
+  src: url("~@haufe-umantis/styles/assets/fonts/avenir-next/AvenirNextRegular.eot") format("eot"), url("~@haufe-umantis/styles/assets/fonts/avenir-next/AvenirNextRegular.woff2") format("woff2"), url("~@haufe-umantis/styles/assets/fonts/avenir-next/AvenirNextRegular.woff") format("woff"), url("~@haufe-umantis/styles/assets/fonts/avenir-next/AvenirNextRegular.ttf") format("truetype"), url("~@haufe-umantis/styles/assets/fonts/avenir-next/AvenirNextRegular.svg") format("svg");
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Avenir Next";
+  src: url("~@haufe-umantis/styles/assets/fonts/avenir-next/AvenirNextRegularItalic.eot");
+  src: url("~@haufe-umantis/styles/assets/fonts/avenir-next/AvenirNextRegularItalic.eot") format("eot"), url("~@haufe-umantis/styles/assets/fonts/avenir-next/AvenirNextRegularItalic.woff2") format("woff2"), url("~@haufe-umantis/styles/assets/fonts/avenir-next/AvenirNextRegularItalic.woff") format("woff"), url("~@haufe-umantis/styles/assets/fonts/avenir-next/AvenirNextRegularItalic.ttf") format("truetype"), url("~@haufe-umantis/styles/assets/fonts/avenir-next/AvenirNextRegularItalic.svg") format("svg");
+  font-weight: 400;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Avenir Next";
+  src: url("~@haufe-umantis/styles/assets/fonts/avenir-next/AvenirNextMedium.eot");
+  src: url("~@haufe-umantis/styles/assets/fonts/avenir-next/AvenirNextMedium.eot") format("eot"), url("~@haufe-umantis/styles/assets/fonts/avenir-next/AvenirNextMedium.woff2") format("woff2"), url("~@haufe-umantis/styles/assets/fonts/avenir-next/AvenirNextMedium.woff") format("woff"), url("~@haufe-umantis/styles/assets/fonts/avenir-next/AvenirNextMedium.ttf") format("truetype"), url("~@haufe-umantis/styles/assets/fonts/avenir-next/AvenirNextMedium.svg") format("svg");
+  font-weight: 500;
+}
+@font-face {
+  font-family: "Avenir Next";
+  src: url("~@haufe-umantis/styles/assets/fonts/avenir-next/AvenirNextMediumItalic.eot");
+  src: url("~@haufe-umantis/styles/assets/fonts/avenir-next/AvenirNextMediumItalic.eot") format("eot"), url("~@haufe-umantis/styles/assets/fonts/avenir-next/AvenirNextMediumItalic.woff2") format("woff2"), url("~@haufe-umantis/styles/assets/fonts/avenir-next/AvenirNextMediumItalic.woff") format("woff"), url("~@haufe-umantis/styles/assets/fonts/avenir-next/AvenirNextMediumItalic.ttf") format("truetype"), url("~@haufe-umantis/styles/assets/fonts/avenir-next/AvenirNextMediumItalic.svg") format("svg");
+  font-weight: 500;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Avenir Next";
+  src: url("~@haufe-umantis/styles/assets/fonts/avenir-next/AvenirNextDemi.eot");
+  src: url("~@haufe-umantis/styles/assets/fonts/avenir-next/AvenirNextDemi.eot") format("eot"), url("~@haufe-umantis/styles/assets/fonts/avenir-next/AvenirNextDemi.woff2") format("woff2"), url("~@haufe-umantis/styles/assets/fonts/avenir-next/AvenirNextDemi.woff") format("woff"), url("~@haufe-umantis/styles/assets/fonts/avenir-next/AvenirNextDemi.ttf") format("truetype"), url("~@haufe-umantis/styles/assets/fonts/avenir-next/AvenirNextDemi.svg") format("svg");
+  font-weight: 600;
+}
+@font-face {
+  font-family: "Avenir Next";
+  src: url("~@haufe-umantis/styles/assets/fonts/avenir-next/AvenirNextDemiItalic.eot");
+  src: url("~@haufe-umantis/styles/assets/fonts/avenir-next/AvenirNextDemiItalic.eot") format("eot"), url("~@haufe-umantis/styles/assets/fonts/avenir-next/AvenirNextDemiItalic.woff2") format("woff2"), url("~@haufe-umantis/styles/assets/fonts/avenir-next/AvenirNextDemiItalic.woff") format("woff"), url("~@haufe-umantis/styles/assets/fonts/avenir-next/AvenirNextDemiItalic.ttf") format("truetype"), url("~@haufe-umantis/styles/assets/fonts/avenir-next/AvenirNextDemiItalic.svg") format("svg");
+  font-weight: 600;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Avenir Next";
+  src: url("~@haufe-umantis/styles/assets/fonts/avenir-next/AvenirNextBold.eot");
+  src: url("~@haufe-umantis/styles/assets/fonts/avenir-next/AvenirNextBold.eot") format("eot"), url("~@haufe-umantis/styles/assets/fonts/avenir-next/AvenirNextBold.woff2") format("woff2"), url("~@haufe-umantis/styles/assets/fonts/avenir-next/AvenirNextBold.woff") format("woff"), url("~@haufe-umantis/styles/assets/fonts/avenir-next/AvenirNextBold.ttf") format("truetype"), url("~@haufe-umantis/styles/assets/fonts/avenir-next/AvenirNextBold.svg") format("svg");
+  font-weight: 700;
+}
+@font-face {
+  font-family: "Avenir Next";
+  src: url("~@haufe-umantis/styles/assets/fonts/avenir-next/AvenirNextBoldItalic.eot");
+  src: url("~@haufe-umantis/styles/assets/fonts/avenir-next/AvenirNextBoldItalic.eot") format("eot"), url("~@haufe-umantis/styles/assets/fonts/avenir-next/AvenirNextBoldItalic.woff2") format("woff2"), url("~@haufe-umantis/styles/assets/fonts/avenir-next/AvenirNextBoldItalic.woff") format("woff"), url("~@haufe-umantis/styles/assets/fonts/avenir-next/AvenirNextBoldItalic.ttf") format("truetype"), url("~@haufe-umantis/styles/assets/fonts/avenir-next/AvenirNextBoldItalic.svg") format("svg");
+  font-weight: 700;
+  font-style: italic;
+}
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  border: 0;
+  font-size: 100%;
+  font-family: inherit;
+  margin: 0;
+  padding: 0;
+  vertical-align: baseline;
+  word-break: break-word;
+}
+
+html, body {
+  background-color: #F4F7FA;
+  height: 100%;
+  min-height: 100%;
+}
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote::before, blockquote::after,
+q::before, q::after {
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+img {
+  -ms-interpolation-mode: bicubic;
+  display: block;
+  height: auto;
+  max-width: 100%;
+  width: auto;
+}
+
+iframe {
+  border: 0;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  background: none;
+  border: none;
+  display: inline-block;
+  padding: 0;
+  width: auto;
+}
+
+*,
+*::before,
+*::after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  /* stylelint-disable */
+  -webkit-font-smoothing: antialiased !important;
+  font-smoothing: antialiased !important;
+  /* stylelint-enable */
+  outline: 0;
+  text-rendering: optimizeLegibility !important;
+}
+
+html, body {
+  position: relative;
+}
+
+.display-none {
+  display: none !important;
+}
+
+a {
+  text-decoration: none;
+}
+
+pre {
+  white-space: pre-wrap;
+  /* css-3 */
+  white-space: -moz-pre-wrap;
+  /* Mozilla, since 1999 */
+  white-space: -pre-wrap;
+  /* Opera 4-6 */
+  white-space: -o-pre-wrap;
+  /* Opera 7 */
+  word-wrap: break-word;
+  /* Internet Explorer 5.5+ */
+}
+
+html, input, textarea, button, p {
+  color: #6C7880;
+  font-family: "Avenir Next", "Open Sans", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Microsoft Yahei", "微软雅黑", STXihei, "华文细黑", sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+*::placeholder {
+  font-family: "Avenir Next", "Open Sans", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Microsoft Yahei", "微软雅黑", STXihei, "华文细黑", sans-serif;
+}
+
+a {
+  color: currentColor;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+}
+a:hover, a:focus, a:active, a:visited {
+  color: currentColor;
+  text-decoration: none;
+}
+
+b, strong {
+  font-weight: 600;
+}
+
+.carousel .ccard__content section {
+  background-color: #FFF;
+  border-radius: 4px;
+  border: solid 1px #F4F7FA;
+}
+
+.carousel .carousel__back button, .carousel .ccard__content dl dd, .listbox-person__content .row:first-child > *:not(.tag), .listbox-item > *, .carousel .responsiveDropdown button span, .listbox-person__content .row:last-child > *:not(.tag), .carousel .ccard__content dl dt {
+  font-family: inherit;
+  font-size: inherit;
+  font-stretch: normal;
+  font-style: normal;
+  letter-spacing: normal;
+  text-align: left;
+}
+
+.carousel .carousel__back button, .carousel .ccard__content dl dd {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+.listbox-person__content .row:first-child > *:not(.tag), .listbox-item > *, .carousel .responsiveDropdown button span {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.43;
+}
+
+.listbox-person__content .row:last-child > *:not(.tag), .carousel .ccard__content dl dt {
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 1.23;
+}
+
+.form label, .form .label, .switch .switch__label, .checkbox, .radio-button {
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 1.54;
+}
+
+.form label, .form .label, .switch .switch__label, .checkbox, .radio-button {
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 1.54;
+}
+
+.form .error, .checkbox[aria-invalid=true] + .error, .radio-button[aria-invalid=true] + .error {
+  color: #CC3D3D;
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 1.2307692308;
+}
+
+.avatar {
+  align-items: center;
+  background-color: #F4F7FA;
+  border-radius: 50%;
+  border: 1px solid #6C7880;
+  color: #303940;
+  display: flex;
+  justify-content: center;
+  text-transform: uppercase;
+}
+.avatar[style] {
+  border-color: #FFF;
+  font-size: 0;
+}
+.avatar--s {
+  background-size: 24px;
+  height: 24px;
+  width: 24px;
+  font-size: 10px;
+  font-weight: 600;
+}
+.avatar--m {
+  background-size: 32px;
+  height: 32px;
+  width: 32px;
+  font-size: 13px;
+  font-weight: 500;
+}
+.avatar--l {
+  background-size: 48px;
+  height: 48px;
+  width: 48px;
+  font-size: 16px;
+  font-weight: 500;
+}
+.avatar--xl {
+  background-size: 80px;
+  height: 80px;
+  width: 80px;
+  font-size: 20px;
+  font-weight: 500;
+}
+.avatar--more {
+  color: #386F9D;
+  cursor: pointer;
+  border-color: #386F9D;
+}
+
+.avatar-group {
+  display: flex;
+  flex-direction: row;
+}
+.avatar-group li:not(:first-child) .avatar {
+  margin-left: -6px;
+}
+
+/**
+ * Button:
+ * Use `.button` class. Default one use application white/neutral colors.
+ * For main form actions (save, edit, etc) use `.button.button--main`, that one use primary application colors.
+ * For alternative button use `.button.alternative`, that one use secondary application colors.
+ * Focus and disable respond to `:focus` and `:disable` respectively;
+ * but also you can use `.button.is-focus` and `.button.is-disable`.
+ *
+ *     @example
+ *     <button class="button">Cancel</button>
+ *     <button class="button is-focus">Cancel</button>
+ *     <button class="button is-hover">Cancel</button>
+ *     <button class="button" aria-disabled="true">Cancel</button>
+ *     <button class="button is-loading"><i></i><i></i><i></i></button><br/><br/>
+ *     <button class="button button--main">Save</button>
+ *     <button class="button button--main is-focus">Save</button>
+ *     <button class="button button--main is-hover">Save</button>
+ *     <button class="button button--main" aria-disabled="true">Save</button>
+ *     <button class="button button--main is-loading"><i></i><i></i><i></i></button><br/><br/>
+ *     <button class="button button--alternative">Complete</button>
+ *     <button class="button button--alternative is-focus">Complete</button>
+ *     <button class="button button--alternative is-hover">Complete</button>
+ *     <button class="button button--alternative" aria-disabled="true">Complete</button>
+ *     <button class="button button--alternative is-loading"><i></i><i></i><i></i></button><br/><br/>
+ *     <button class="button button--error">danger</button>
+ *     <button class="button button--error is-focus">danger</button>
+ *     <button class="button button--error is-hover">danger</button>
+ *     <button class="button button--error" aria-disabled="true">danger</button>
+ *     <button class="button button--error is-loading"><i></i><i></i><i></i></button><br/><br/>
+ *     <button class="button button small">Cancel</button>
+ *     <button class="button button--main small">Save</button>
+ *     <button class="button button--alternative small">Complete</button>
+ *     <button class="button button--error small">danger</button>
+ *     <button class="button button small is-loading"><i></i><i></i><i></i></button><br/>
+ *     <div role="button button--download"><icon></icon><span>pdf</span></div><br/>
+ *     <button class="button button--rounded"><icon></icon></button>
+ */
+@keyframes loading {
+  0% {
+    opacity: 0.6;
+    transform: scale(0.8);
+  }
+  50% {
+    opacity: 0.8;
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+.button {
+  border-width: 1px;
+  padding: 5px 15px;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  line-height: 2;
+  text-decoration: none;
+  text-transform: uppercase;
+  word-break: keep-all;
+  color: #6C7880;
+  appearance: none;
+  background: #FFF;
+  border-color: #DCE1E6;
+  border-radius: 2px;
+  border-style: solid;
+  box-shadow: 0 1px 3px 0 rgba(48, 57, 64, 0.1), 0 4px 6px 0 rgba(48, 57, 64, 0.1);
+  cursor: pointer;
+  display: inline-block;
+  transition: background ease-in-out 0.3s;
+}
+.button.small {
+  border-width: 1px;
+  padding: 1px 7px;
+}
+.button:focus, .button.is-focus {
+  border-color: #74C3FB;
+  border-width: 2px;
+  padding: 4px 14px;
+}
+.button:focus.small, .button.is-focus.small {
+  border-color: #74C3FB;
+  border-width: 2px;
+  padding: 0px 6px;
+}
+.button:disabled, .button:disabled:hover, .button:disabled.is-hover, .button.is-disable, .button.is-disable:hover, .button.is-disable.is-hover, .button[aria-disabled=true], .button[aria-disabled=true]:hover, .button[aria-disabled=true].is-hover {
+  border-color: transparent;
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+.button.is-loading {
+  cursor: progress;
+  display: inline-flex;
+  height: 32px;
+  justify-content: center;
+}
+.button.is-loading.small {
+  height: 24px;
+}
+.button.is-loading i {
+  height: 4px;
+  width: 4px;
+  animation-direction: alternate;
+  animation-duration: 0.8s;
+  animation-fill-mode: none;
+  animation-iteration-count: infinite;
+  animation-name: loading;
+  animation-play-state: running;
+  animation-timing-function: ease-out;
+  border-radius: 100%;
+  display: block;
+  margin: 0 1px;
+  animation-delay: 0.1s;
+  background: #6C7880;
+  margin: 0 5px;
+}
+.button.is-loading i:first-child {
+  animation-delay: 0s;
+  margin: 0;
+}
+.button.is-loading i:last-child {
+  animation-delay: 0.2s;
+  margin: 0;
+}
+.button--download {
+  display: flex;
+}
+.button--download span {
+  background: #CC3D3D;
+  color: #FFF;
+  font-size: 8px;
+  font-weight: bold;
+  margin-left: 8px;
+  padding: 0 4px;
+  text-transform: uppercase;
+}
+.button--rounded {
+  align-items: center;
+  border-color: #FFF;
+  display: inline-flex;
+  border-radius: 50%;
+  height: 40px;
+  justify-content: center;
+  padding: 8px;
+  width: 40px;
+}
+.button--rounded umantis-icon {
+  height: 24px;
+  width: 24px;
+}
+.button--rounded:hover, .button--rounded.is-hover {
+  border-color: #FFF;
+}
+.button--rounded:hover umantis-icon svg g, .button--rounded.is-hover umantis-icon svg g {
+  stroke: #386F9D;
+}
+.button--rounded:focus, .button--rounded.is-focus {
+  padding: 7px;
+}
+
+.button.button--main {
+  background: #386F9D;
+  border-color: transparent;
+  color: #FFF;
+  margin: 1px;
+}
+.button.button--main:hover, .button.button--main.is-hover {
+  background: #245278;
+  border-color: transparent;
+  color: #FFF;
+}
+.button.button--main:focus, .button.button--main.is-focus {
+  border-color: #74C3FB;
+  border-width: 2px;
+  padding: 4px 14px;
+}
+.button.button--main:focus.small, .button.button--main.is-focus.small {
+  border-color: #74C3FB;
+  border-width: 2px;
+  padding: 0px 6px;
+}
+.button.button--main[disabled]:hover, .button.button--main[disabled].is-hover, .button.button--main.is-disable:hover, .button.button--main.is-disable.is-hover, .button.button--main[aria-disabled=true]:hover, .button.button--main[aria-disabled=true].is-hover {
+  background: #386F9D;
+  border-color: transparent;
+  color: #FFF;
+  cursor: not-allowed;
+}
+.button.button--main.is-loading i {
+  background: #FFF;
+}
+
+.button.button--secondary {
+  background: #FFF;
+  border-color: transparent;
+  color: #6C7880;
+  margin: 1px;
+}
+.button.button--secondary:hover, .button.button--secondary.is-hover {
+  background: #FFF;
+  border-color: transparent;
+  color: #386F9D;
+}
+.button.button--secondary:focus, .button.button--secondary.is-focus {
+  border-color: #74C3FB;
+  border-width: 2px;
+  padding: 4px 14px;
+}
+.button.button--secondary:focus.small, .button.button--secondary.is-focus.small {
+  border-color: #74C3FB;
+  border-width: 2px;
+  padding: 0px 6px;
+}
+.button.button--secondary[disabled]:hover, .button.button--secondary[disabled].is-hover, .button.button--secondary.is-disable:hover, .button.button--secondary.is-disable.is-hover, .button.button--secondary[aria-disabled=true]:hover, .button.button--secondary[aria-disabled=true].is-hover {
+  background: #FFF;
+  border-color: transparent;
+  color: #6C7880;
+  cursor: not-allowed;
+}
+.button.button--secondary.is-loading i {
+  background: #6C7880;
+}
+
+.button.button--alternative {
+  background: #2F9669;
+  border-color: transparent;
+  color: #FFF;
+  margin: 1px;
+}
+.button.button--alternative:hover, .button.button--alternative.is-hover {
+  background: #1F6E46;
+  border-color: transparent;
+  color: #FFF;
+}
+.button.button--alternative:focus, .button.button--alternative.is-focus {
+  border-color: #74C3FB;
+  border-width: 2px;
+  padding: 4px 14px;
+}
+.button.button--alternative:focus.small, .button.button--alternative.is-focus.small {
+  border-color: #74C3FB;
+  border-width: 2px;
+  padding: 0px 6px;
+}
+.button.button--alternative[disabled]:hover, .button.button--alternative[disabled].is-hover, .button.button--alternative.is-disable:hover, .button.button--alternative.is-disable.is-hover, .button.button--alternative[aria-disabled=true]:hover, .button.button--alternative[aria-disabled=true].is-hover {
+  background: #2F9669;
+  border-color: transparent;
+  color: #FFF;
+  cursor: not-allowed;
+}
+.button.button--alternative.is-loading i {
+  background: #FFF;
+}
+
+.button.button--error {
+  background: #CC3D3D;
+  border-color: transparent;
+  color: #FFF;
+  margin: 1px;
+}
+.button.button--error:hover, .button.button--error.is-hover {
+  background: #992E2E;
+  border-color: transparent;
+  color: #FFF;
+}
+.button.button--error:focus, .button.button--error.is-focus {
+  border-color: #74C3FB;
+  border-width: 2px;
+  padding: 4px 14px;
+}
+.button.button--error:focus.small, .button.button--error.is-focus.small {
+  border-color: #74C3FB;
+  border-width: 2px;
+  padding: 0px 6px;
+}
+.button.button--error[disabled]:hover, .button.button--error[disabled].is-hover, .button.button--error.is-disable:hover, .button.button--error.is-disable.is-hover, .button.button--error[aria-disabled=true]:hover, .button.button--error[aria-disabled=true].is-hover {
+  background: #CC3D3D;
+  border-color: transparent;
+  color: #FFF;
+  cursor: not-allowed;
+}
+.button.button--error.is-loading i {
+  background: #FFF;
+}
+
+.button.button--main[disabled], .button.button--main.is-disable, .button.button--main[aria-disabled=true], .button.button--secondary[disabled], .button.button--secondary.is-disable, .button.button--secondary[aria-disabled=true], .button.button--alternative[disabled], .button.button--alternative.is-disable, .button.button--alternative[aria-disabled=true], .button.button--error[disabled], .button.button--error.is-disable, .button.button--error[aria-disabled=true] {
+  opacity: 0.5;
+}
+
+/**
+* Text button:
+* Use `.text-button` class. Default one use application white/neutral colors.
+* For main form actions (save, edit, etc) use `.text-button.text-button--main`, that one use primary application colors.
+* Focus and disable respond to `:focus` and `:disable` respectively;
+* but also you can use `.text-button.is-focus` and `.text-button.is-disable`.
+*
+*     @example
+*     <button class="text-button">Subtle</button>
+*     <button class="text-button is-focus">Subtle</button>
+*     <button class="text-button is-hover">Subtle</button>
+*     <button class="text-button" aria-disabled="true">Subtle</button>
+*     <button class="text-button text-button--main">Subtle sec</button>
+*     <button class="text-button text-button--main is-focus">Subtle sec</button>
+*     <button class="text-button text-button--main is-hover">Subtle sec</button>
+*     <button class="text-button text-button--main" aria-disabled="true">Subtle sec</button>
+*/
+.text-button {
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  line-height: 2;
+  text-decoration: none;
+  text-transform: uppercase;
+  word-break: keep-all;
+  background-color: transparent;
+  border: 2px solid transparent;
+  border-radius: 2px;
+  cursor: pointer;
+  padding: 4px 14px;
+  transition: color ease-in-out 0.3s, background-color ease-in-out 0.3s;
+}
+.text-button:focus, .text-button.is-focus {
+  border: 2px solid #74C3FB;
+}
+.text-button:hover, .text-button.is-hover {
+  background-color: #F4F7FA;
+  color: #386F9D;
+}
+.text-button:disabled, .text-button.is-disable, .text-button[aria-disabled=true] {
+  opacity: 0.5;
+  pointer-events: none;
+}
+.text-button--main {
+  color: #386F9D;
+}
+.text-button--main:hover, .text-button--main.is-hover {
+  color: #245278;
+}
+
+/**
+ * Add Button:
+ * Size alternatives: `.small`
+ *
+ *     @example
+ *     <div role="button" class="add-button" tabindex="0" aria-label="Add a new Goal"></div>
+ *     <div role="button" class="add-button small" role="button" tabindex="0" aria-label="Add a new Goal"></div>
+ */
+.add-button {
+  height: 48px;
+  width: 48px;
+  appearance: none;
+  background: #000;
+  border: 0;
+  border-radius: 48px;
+  box-sizing: border-box;
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  padding: 14px;
+}
+.add-button.small {
+  height: 32px;
+  width: 32px;
+  border-radius: 32px;
+  padding: 10px;
+}
+.add-button:after, .add-button:before {
+  background: #FFF;
+  content: "";
+  display: block;
+  font-size: 0;
+  height: 2px;
+  width: 100%;
+  margin-top: 8px;
+  position: absolute;
+  width: 20px;
+}
+.add-button:after {
+  transform: rotate(90deg);
+}
+.add-button.small:after, .add-button.small:before {
+  margin-top: 5px;
+  width: 12px;
+}
+
+button.add-button:after, button.add-button:before, button.add-button.small:after, button.add-button.small:before {
+  margin-top: 0;
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(120, 150, 171, 0.5);
+  }
+  70% {
+    box-shadow: 0 0 0 12px rgba(120, 150, 171, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 rgba(120, 150, 171, 0);
+  }
+}
+.add-button {
+  animation: pulse 1.7s infinite;
+  background: #386F9D;
+  box-shadow: 0 0 0 0 rgba(120, 150, 171, 0.5);
+}
+.add-button:hover {
+  animation: none;
+}
+
+/**
+ * Radio Button:
+ * States: checked/enabled/disabled.
+ *
+ *     @example
+ *     <div class="radio-button" role="radio" aria-checked="false" tabindex="0">Default</div>
+ *     <div class="radio-button" role="radio" aria-checked="true" tabindex="0">Checked</div>
+ *     <div class="radio-button" role="radio" aria-checked="false" aria-disabled="true" tabindex="0">Disabled</div>
+ *     <div class="radio-button" role="radio" aria-checked="true" aria-disabled="true" tabindex="0">Disabled and Checked</div>
+ *     <div class="radio-button" role="radio" aria-checked="false" aria-invalid="true" tabindex="0">Error</div>
+ *     <div class="error" role="alert">This is an error alert</div>
+ *     <div class="radio-button" role="radio" aria-checked="true" aria-invalid="true" tabindex="0">Checked with error</div>
+ *     <div class="error" role="alert">This is an error alert</div>
+ */
+.radio-button {
+  color: #6C7880;
+  cursor: pointer;
+  display: block;
+  margin-bottom: 12px;
+  padding-left: 28px;
+  position: relative;
+}
+.radio-button::before, .radio-button::after {
+  content: "";
+  left: 8px;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.radio-button::before {
+  height: 16px;
+  width: 16px;
+  background-color: #FFF;
+  border: solid 1px #DCE1E6;
+  border-radius: 100%;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.07);
+}
+.radio-button[aria-checked=true]::before {
+  background-color: #386F9D;
+  border-color: #386F9D;
+}
+.radio-button[aria-checked=true]::after {
+  height: 6px;
+  width: 6px;
+  background-color: #FFF;
+  border-radius: 50%;
+  display: block;
+}
+.radio-button[aria-disabled=true] {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+.radio-button[aria-disabled=true]::before {
+  background-color: #F4F7FA;
+}
+.radio-button[aria-checked=true][aria-disabled=true]::before {
+  background-color: #F4F7FA;
+  border-color: #DCE1E6;
+}
+.radio-button[aria-checked=true][aria-disabled=true]::after {
+  background-color: #6C7880;
+}
+.radio-button[aria-invalid=true] {
+  margin-bottom: 6px;
+}
+.radio-button[aria-invalid=true]::before, .radio-button[aria-invalid=true][aria-checked=true]::before {
+  border-color: #CC3D3D;
+}
+.radio-button[aria-invalid=true][aria-checked=true]::before {
+  background-color: #CC3D3D;
+}
+.radio-button[aria-invalid=true] + .error {
+  margin-bottom: 12px;
+}
+
+.tag-list {
+  margin: 0 -12px;
+}
+
+.tag {
+  background: #F4F7FA;
+  border-radius: 4px;
+  display: inline-block;
+  font-size: 10px;
+  font-stretch: normal;
+  font-style: normal;
+  font-weight: 500;
+  letter-spacing: normal;
+  line-height: 1.3;
+  margin: 12px;
+  padding: 2px 8px;
+  text-transform: uppercase;
+}
+
+/**
+ * Checkbox:
+ * States: checked/enabled/disabled.
+ *
+ *     @example
+ *     <div class="checkbox" role="checkbox" aria-checked="false" tabindex="0">Default</div>
+ *     <div class="checkbox" role="checkbox" aria-checked="true" tabindex="0">Checked</div>
+ *     <div class="checkbox" role="checkbox" aria-checked="false" aria-disabled="true" tabindex="0">Disabled</div>
+ *     <div class="checkbox" role="checkbox" aria-checked="true" aria-disabled="true" tabindex="0">Disabled and Checked</div>
+ *     <div class="checkbox" role="checkbox" aria-checked="false" aria-invalid="true" tabindex="0">Default</div>
+ *     <div class="error" role="alert">This is an error alert</div>
+ *     <div class="checkbox" role="checkbox" aria-checked="true" aria-invalid="true" tabindex="0">Checked</div>
+ *     <div class="error" role="alert">This is an error alert</div>
+ */
+.checkbox {
+  color: #6C7880;
+  cursor: default;
+  display: block;
+  margin-bottom: 12px;
+  padding-left: 28px;
+  position: relative;
+}
+.checkbox::before, .checkbox::after {
+  content: "";
+  left: 8px;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.checkbox::before {
+  height: 16px;
+  width: 16px;
+  background: #FFF;
+  border: solid 1px #DCE1E6;
+  border-radius: 2px;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.07);
+}
+.checkbox[aria-checked=true]::before {
+  background: transparent;
+  border-color: #DCE1E6;
+}
+.checkbox[aria-checked=true]::after {
+  display: block;
+  width: 7px;
+  height: 10px;
+  border-color: #FFF;
+  border-style: solid;
+  border-width: 0 2px 2px 0;
+  transform: translateY(-65%) translateX(-50%) rotate(45deg);
+}
+.checkbox[aria-checked=true][aria-disabled=true]::after {
+  border-color: #DCE1E6;
+}
+.checkbox[aria-checked=true]:not([aria-disabled=true])::before {
+  background-color: #386F9D;
+  border-color: #386F9D;
+}
+.checkbox[aria-invalid=true] {
+  margin-bottom: 6px;
+}
+.checkbox[aria-invalid=true]::before, .checkbox[aria-invalid=true][aria-checked=true]::before {
+  border-color: #CC3D3D;
+}
+.checkbox[aria-invalid=true][aria-checked=true]::before {
+  background-color: #CC3D3D;
+}
+.checkbox[aria-invalid=true] + .error {
+  margin-bottom: 12px;
+}
+
+.switch {
+  border-radius: 8px;
+  cursor: pointer;
+  overflow: hidden;
+  position: relative;
+  width: auto;
+}
+.switch, .switch .switch__label, .switch::before, .switch::after {
+  display: inline-block;
+  height: 16px;
+  line-height: 16px;
+}
+.switch::before, .switch::after {
+  content: "";
+}
+.switch .switch__label span {
+  display: block;
+  line-height: 16px;
+  transition: all ease-in-out 0.3s;
+}
+.switch::before {
+  background: #DCE1E6;
+  border-radius: 8px;
+  border: 0;
+  float: left;
+  height: 16px;
+  margin-right: 12px;
+  padding: 0;
+  transition: all ease-in-out 0.3s;
+  width: 32px;
+}
+.switch::after {
+  background: #FFF;
+  border-radius: 50%;
+  display: block;
+  height: 12px;
+  margin: 2px;
+  position: absolute;
+  top: 0;
+  width: 12px;
+}
+.switch[aria-checked=true] .switch__label span {
+  transform: translateY(-16px);
+}
+.switch[aria-checked=true]::before {
+  background: #2F9669;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.1);
+}
+.switch[aria-checked=true]:after {
+  transform: translateX(16px);
+}
+
+/**
+ * Form:
+ * Use `.carousel` class.
+ *
+ *     @example
+ *     <div class="carousel">
+ *      <div class="carousel__back"></div>
+ *      <div class="carousel__prev"></div>
+ *      <div class="carousel__next"></div>
+ *      <div class="carousel__container">
+ *        <div class="ccard">
+ *          <div class="ccard__title">
+ *            Title
+ *            <div class="ccard__title__actions"></div>
+ *          </div>
+ *          <div class="ccard__content"></div>
+ *          <div class="ccard__footer"></div>
+ *        </div>
+ *        <div class="ccard fake"></div>
+ *      </div><!-- / carousel__container -->
+ *    </div><!-- / carousel -->
+ **/
+.carousel button.action, .carousel .carousel__prev button, .carousel .carousel__next button {
+  height: 40px;
+  width: 40px;
+  cursor: pointer;
+  border-radius: 20px;
+  display: inline;
+  line-height: 0;
+  text-align: center;
+  transition: background 0.3s ease;
+}
+
+.carousel .ccard {
+  border: 1px solid #F4F7FA;
+  background: #FFF;
+  border-radius: 4px;
+  margin: 0 auto;
+  padding: 16px 32px 24px 32px;
+  position: relative;
+}
+@media only screen and (max-width: 767px) {
+  .carousel .ccard {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}
+
+@keyframes labelFromLeft {
+  0% {
+    opacity: 0;
+    transform: translate(-196px, -8px);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(-176px, -8px);
+  }
+}
+@keyframes labelFromRight {
+  0% {
+    opacity: 0;
+    transform: translate(60px, -8px);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(40px, -8px);
+  }
+}
+.carousel {
+  align-items: center;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  height: 100%;
+  justify-content: center;
+  left: 0;
+  margin: 0;
+  padding: 64px 16px 20px 16px;
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 100%;
+  z-index: 101;
+}
+@media only screen and (min-width: 1200px) {
+  .carousel {
+    padding: 24px;
+  }
+}
+.carousel__container {
+  position: relative;
+  max-width: 48.6875rem;
+}
+.carousel .ccard {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.carousel .ccard.fake {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  top: 0;
+  left: 0;
+}
+.carousel .ccard__title {
+  color: #303940;
+  font-size: 1rem;
+  font-weight: 500;
+  padding: 0 0 8px 0;
+}
+@media only screen and (min-width: 768px) {
+  .carousel .ccard__title {
+    padding: 0 0 16px 0;
+  }
+}
+.carousel .ccard__title__actions {
+  float: right;
+  margin: -8px 0 0 0;
+}
+.carousel .ccard__title__actions li {
+  display: inline-block;
+}
+.carousel .ccard__content {
+  clear: both;
+  height: 100%;
+  margin-right: -20px;
+  margin: 0;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  padding-right: 10px;
+  padding-top: 16px;
+}
+.carousel .ccard__content::-webkit-scrollbar {
+  -webkit-appearance: none;
+  width: 3px;
+}
+.carousel .ccard__content::-webkit-scrollbar-thumb {
+  -webkit-box-shadow: 0 0 1px rgba(255, 255, 255, 0.5);
+  background-color: #F4F7FA;
+  border-radius: 4px;
+}
+.carousel .ccard__content section {
+  padding: 16px;
+  margin: 0 0 24px 0;
+}
+@media only screen and (min-width: 768px) {
+  .carousel .ccard__content dl {
+    margin: 0 0 0 8px;
+  }
+}
+.carousel .ccard__content dl dt {
+  color: #6C7880;
+  margin: 0 0 4px 0;
+}
+.carousel .ccard__content dl dd {
+  margin: 0 0 16px 0;
+}
+.carousel .ccard__content dl dd:last-child {
+  margin-bottom: 0;
+}
+.carousel .ccard__footer {
+  padding-top: 24px;
+}
+.carousel:after {
+  content: "";
+  display: block;
+  position: fixed;
+  background: black;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  opacity: 0.7;
+  z-index: -1;
+}
+.carousel .button {
+  width: auto;
+}
+@media only screen and (min-width: 1024px) {
+  .carousel {
+    flex-direction: row;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .carousel {
+    padding-top: 40px;
+  }
+}
+.carousel .carousel__back, .carousel .carousel__prev, .carousel .carousel__next {
+  position: relative;
+  width: 100%;
+  max-width: 48.6875rem;
+  line-height: 1;
+}
+@media only screen and (max-width: 1023px) {
+  .carousel .carousel__back, .carousel .carousel__prev, .carousel .carousel__next {
+    line-height: 0;
+  }
+  .carousel .carousel__back button, .carousel .carousel__prev button, .carousel .carousel__next button {
+    position: absolute;
+  }
+}
+@media only screen and (max-width: 1023px) {
+  .carousel .carousel__prev button, .carousel .carousel__next button {
+    position: absolute;
+    right: 0;
+    transform: translateY(-52px);
+  }
+  .carousel .carousel__prev button span, .carousel .carousel__next button span {
+    display: none;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .carousel .carousel__prev, .carousel .carousel__next {
+    width: auto;
+    flex-grow: 1;
+    flex-basis: 5%;
+  }
+  .carousel .carousel__prev span, .carousel .carousel__next span {
+    display: inline-block;
+    opacity: 0;
+  }
+}
+@media only screen and (max-width: 1023px) {
+  .carousel .carousel__prev button {
+    transform: translate(-40px, -52px);
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .carousel .carousel__prev {
+    margin-right: 16px;
+  }
+  .carousel .carousel__prev button:hover span {
+    animation: labelFromLeft 0.4s forwards;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .carousel .carousel__next {
+    margin-left: 16px;
+    order: 1;
+  }
+  .carousel .carousel__next button:hover span {
+    animation: labelFromRight 0.4s forwards;
+  }
+}
+.carousel .carousel__back button {
+  transform: translateY(-52px);
+  cursor: pointer;
+}
+@media only screen and (min-width: 1024px) {
+  .carousel .carousel__back {
+    position: fixed;
+    top: 0;
+    margin: 12px 0 0 0;
+  }
+  .carousel .carousel__back button {
+    transform: none;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .carousel .carousel__back {
+    left: 0;
+    margin: 24px;
+  }
+}
+.carousel .carousel__container {
+  width: 100%;
+  max-width: 48.6875rem;
+  margin: 0;
+}
+.carousel:after {
+  background: #F4F7FA;
+  opacity: 1;
+}
+.carousel button:not(.action) {
+  width: auto;
+  text-align: center;
+}
+.carousel .carousel__back button {
+  padding: 4px 16px 4px 0;
+  align-items: center;
+  border-radius: 4px;
+  color: #6C7880;
+  display: flex;
+  flex-direction: row;
+}
+.carousel .carousel__back button:hover {
+  background: #ebebeb;
+}
+.carousel .carousel__prev img, .carousel .carousel__next img {
+  display: inherit;
+}
+.carousel .carousel__prev span, .carousel .carousel__next span {
+  text-transform: uppercase;
+  position: absolute;
+  display: block;
+  width: 150px;
+  font-size: 12px;
+  color: #DCE1E6;
+}
+.carousel .carousel__prev button, .carousel .carousel__next button {
+  padding: 11px;
+  transition: background 0.3s ease;
+}
+.carousel .carousel__prev button:hover, .carousel .carousel__next button:hover {
+  background: #F4F7FA;
+}
+.carousel .carousel__prev {
+  text-align: right;
+}
+.carousel .carousel__prev button span {
+  text-align: right;
+}
+.carousel .carousel__next {
+  text-align: left;
+}
+.carousel .carousel__next img {
+  transform: rotate(180deg);
+}
+.carousel .carousel__next button span {
+  text-align: left;
+}
+.carousel .carouselHeading {
+  border-bottom: 1px solid #F4F7FA;
+  color: #386F9D;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  line-height: 2;
+  margin-bottom: 32px;
+  padding-bottom: 8px;
+  text-transform: uppercase;
+}
+.carousel .carouselHeading button.action {
+  float: right;
+  margin: -15px -8px 0 0;
+  opacity: 0;
+  transform: translate(0, 8px);
+  transition: all 0.3s ease;
+}
+section:hover .carousel .carouselHeading button.action {
+  opacity: 1;
+  transform: none;
+}
+.carousel button.action:hover {
+  background: #F4F7FA;
+}
+.carousel button.action img {
+  display: inline-block;
+}
+.carousel button.action span {
+  display: none;
+}
+.carousel .responsiveDropdown button span {
+  font-weight: 500;
+  margin: 4px 0 4px 4px;
+}
+.carousel .responsiveDropdownTrigger {
+  float: right;
+}
+@media only screen and (max-width: 1023px) {
+  .carousel .responsiveDropdown {
+    background: #FFF;
+    border-radius: 4px;
+    box-shadow: 0 2px 14px 0 rgba(0, 0, 0, 0.07);
+    display: none;
+    margin: 30px 0 0 0;
+    position: absolute;
+    right: 24px;
+    z-index: 50;
+  }
+  .carousel .responsiveDropdown.is-open {
+    display: block;
+  }
+  .carousel .responsiveDropdown li {
+    display: block;
+    padding: 4px;
+  }
+  .carousel .responsiveDropdown li button.action {
+    width: 100%;
+    border-radius: 0;
+    display: flex;
+  }
+  .carousel .responsiveDropdown li button.action span {
+    display: block;
+    padding: 0 16px;
+    margin: 0;
+    line-height: 32px;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .carousel .actions.responsiveDropdown span, .carousel .responsiveDropdownTrigger {
+    display: none;
+  }
+  .carousel .actions.responsiveDropdown {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+  }
+  .carousel .actions.responsiveDropdown li {
+    width: 40px;
+    margin-left: 8px;
+  }
+  .carousel .actions.responsiveDropdown li button span {
+    display: none;
+  }
+}
+
+.dropdown {
+  background: #FFF;
+  border-radius: 4px;
+  border: solid 1px #F4F7FA;
+  box-shadow: 0 2px 14px 0 rgba(0, 0, 0, 0.07);
+  margin-top: 8px;
+  position: absolute;
+  width: 100%;
+  z-index: 10;
+}
+
+/**
+ * Form:
+ * Use `.form` class.
+ *
+ *     @example
+ *     <form class="form"></form>
+ **/
+.form label, .form .label {
+  display: block;
+  margin-bottom: 8px;
+}
+.form .input, .form input[type=text], .form input[type=password], .form input[type=name], .form input[type=email], .form input[type=tel], .form input[type=datetime], .form input[type=number] {
+  border: solid 1px #F4F7FA;
+  border-radius: 2px;
+  color: #303940;
+  font-family: "Avenir Next", "Open Sans", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Microsoft Yahei", "微软雅黑", STXihei, "华文细黑", sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.14;
+  padding: 16px;
+  transition: border-color ease-in-out 0.3s;
+}
+.form .input[placeholder], .form input[type=text][placeholder], .form input[type=password][placeholder], .form input[type=name][placeholder], .form input[type=email][placeholder], .form input[type=tel][placeholder], .form input[type=datetime][placeholder], .form input[type=number][placeholder] {
+  color: #303940;
+}
+.form .input[aria-invalid], .form .input.has-errors, .form input[type=text][aria-invalid], .form input[type=text].has-errors, .form input[type=password][aria-invalid], .form input[type=password].has-errors, .form input[type=name][aria-invalid], .form input[type=name].has-errors, .form input[type=email][aria-invalid], .form input[type=email].has-errors, .form input[type=tel][aria-invalid], .form input[type=tel].has-errors, .form input[type=datetime][aria-invalid], .form input[type=datetime].has-errors, .form input[type=number][aria-invalid], .form input[type=number].has-errors {
+  border-color: #CC3D3D;
+}
+.form .input[disabled], .form .input.is-disable, .form input[type=text][disabled], .form input[type=text].is-disable, .form input[type=password][disabled], .form input[type=password].is-disable, .form input[type=name][disabled], .form input[type=name].is-disable, .form input[type=email][disabled], .form input[type=email].is-disable, .form input[type=tel][disabled], .form input[type=tel].is-disable, .form input[type=datetime][disabled], .form input[type=datetime].is-disable, .form input[type=number][disabled], .form input[type=number].is-disable {
+  border-color: #F4F7FA;
+  color: #303940;
+  background: #F4F7FA;
+}
+.form .input:focus:not([disabled]):not(.is-disable), .form .input.is-focus:not([disabled]):not(.is-disable), .form .input:active:not([disabled]):not(.is-disable), .form .input.is-active:not([disabled]):not(.is-disable), .form input[type=text]:focus:not([disabled]):not(.is-disable), .form input[type=text].is-focus:not([disabled]):not(.is-disable), .form input[type=text]:active:not([disabled]):not(.is-disable), .form input[type=text].is-active:not([disabled]):not(.is-disable), .form input[type=password]:focus:not([disabled]):not(.is-disable), .form input[type=password].is-focus:not([disabled]):not(.is-disable), .form input[type=password]:active:not([disabled]):not(.is-disable), .form input[type=password].is-active:not([disabled]):not(.is-disable), .form input[type=name]:focus:not([disabled]):not(.is-disable), .form input[type=name].is-focus:not([disabled]):not(.is-disable), .form input[type=name]:active:not([disabled]):not(.is-disable), .form input[type=name].is-active:not([disabled]):not(.is-disable), .form input[type=email]:focus:not([disabled]):not(.is-disable), .form input[type=email].is-focus:not([disabled]):not(.is-disable), .form input[type=email]:active:not([disabled]):not(.is-disable), .form input[type=email].is-active:not([disabled]):not(.is-disable), .form input[type=tel]:focus:not([disabled]):not(.is-disable), .form input[type=tel].is-focus:not([disabled]):not(.is-disable), .form input[type=tel]:active:not([disabled]):not(.is-disable), .form input[type=tel].is-active:not([disabled]):not(.is-disable), .form input[type=datetime]:focus:not([disabled]):not(.is-disable), .form input[type=datetime].is-focus:not([disabled]):not(.is-disable), .form input[type=datetime]:active:not([disabled]):not(.is-disable), .form input[type=datetime].is-active:not([disabled]):not(.is-disable), .form input[type=number]:focus:not([disabled]):not(.is-disable), .form input[type=number].is-focus:not([disabled]):not(.is-disable), .form input[type=number]:active:not([disabled]):not(.is-disable), .form input[type=number].is-active:not([disabled]):not(.is-disable) {
+  border-color: #386F9D;
+}
+.form textarea, .form .textarea {
+  border: solid 1px #F4F7FA;
+  border-radius: 2px;
+  color: #303940;
+  font-family: "Avenir Next", "Open Sans", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Microsoft Yahei", "微软雅黑", STXihei, "华文细黑", sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.14;
+  padding: 16px;
+  transition: border-color ease-in-out 0.3s;
+}
+.form textarea[placeholder], .form .textarea[placeholder] {
+  color: #303940;
+}
+.form textarea[aria-invalid], .form textarea.has-errors, .form .textarea[aria-invalid], .form .textarea.has-errors {
+  border-color: #CC3D3D;
+}
+.form textarea[disabled], .form textarea.is-disable, .form .textarea[disabled], .form .textarea.is-disable {
+  border-color: #F4F7FA;
+  color: #303940;
+  background: #F4F7FA;
+}
+.form textarea:focus:not([disabled]):not(.is-disable), .form textarea.is-focus:not([disabled]):not(.is-disable), .form textarea:active:not([disabled]):not(.is-disable), .form textarea.is-active:not([disabled]):not(.is-disable), .form .textarea:focus:not([disabled]):not(.is-disable), .form .textarea.is-focus:not([disabled]):not(.is-disable), .form .textarea:active:not([disabled]):not(.is-disable), .form .textarea.is-active:not([disabled]):not(.is-disable) {
+  border-color: #386F9D;
+}
+.form .error {
+  display: block;
+  margin-top: 8px;
+}
+.form .field {
+  clear: both;
+  display: block;
+  margin-bottom: 24px;
+}
+
+.listbox-item {
+  display: flex;
+  flex-direction: row;
+  padding: 4px;
+  width: 100%;
+  cursor: pointer;
+}
+.listbox-item:hover {
+  color: #386F9D;
+}
+.listbox-item:hover > * {
+  background: #F4F7FA;
+}
+.listbox-item > * {
+  padding: 12px 20px;
+  width: 100%;
+}
+.listbox-item[aria-disabled=true] {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.listbox-person {
+  display: flex;
+  flex-direction: row;
+  padding: 4px;
+  width: 100%;
+  cursor: pointer;
+}
+.listbox-person:hover > * {
+  background: #F4F7FA;
+}
+.listbox-person:hover .row:first-child span:first-child {
+  color: #386F9D;
+}
+.listbox-person__avatar {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  padding: 0 8px;
+}
+@media only screen and (min-width: 480px) {
+  .listbox-person__avatar {
+    padding: 0 16px;
+  }
+}
+.listbox-person__avatar > * {
+  align-items: center;
+  background-color: #F4F7FA;
+  border-radius: 50%;
+  border: 1px solid #6C7880;
+  color: #303940;
+  display: flex;
+  justify-content: center;
+  text-transform: uppercase;
+  background-size: 24px;
+  height: 24px;
+  width: 24px;
+  font-size: 10px;
+  font-weight: 600;
+}
+.listbox-person__avatar > *[style] {
+  border-color: #FFF;
+  font-size: 0;
+}
+.listbox-person__content {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+.listbox-person__content .row {
+  line-height: 1;
+}
+.listbox-person__content .row > * {
+  margin: 0 12px 0 0;
+}
+.listbox-person__content .row .tag {
+  margin-top: 4px;
+  margin-down: 4px;
+}
+.listbox-person__content .row:first-child {
+  margin-top: 8px;
+  margin-bottom: 4px;
+}
+@media only screen and (max-width: 479px) {
+  .listbox-person__content .row:first-child > *:not(.tag) {
+    display: block;
+  }
+}
+.listbox-person__content .row:last-child {
+  margin-bottom: 8px;
+}
+.listbox-person__content .row:last-child > *:not(.tag) {
+  color: #6C7880;
+}
+.listbox-person[aria-disabled=true] {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.modal {
+  bottom: 0;
+  height: 100%;
+  left: 0;
+  padding: 56px 16px 16px;
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 100%;
+  z-index: 101;
+}
+@media only screen and (min-width: 640px) {
+  .modal {
+    padding: 24px 68px 24px 24px;
+  }
+}
+@media only screen and (min-width: 960px) {
+  .modal {
+    padding: 24px;
+  }
+}
+.modal:after {
+  content: "";
+  display: block;
+  position: fixed;
+  background: black;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  opacity: 0.7;
+  z-index: -1;
+}
+.modal__container {
+  background-color: #FFF;
+  border-radius: 4px;
+  height: 100%;
+  margin: 0 auto;
+  padding: 32px 16px 24px;
+  position: relative;
+  max-width: 48.6875rem;
+}
+@media only screen and (min-width: 640px) {
+  .modal__container {
+    height: auto;
+    padding: 32px 32px 24px;
+  }
+}
+.modal__title {
+  border-bottom: 1px solid #F4F7FA;
+  color: #303940;
+  font-size: 1rem;
+  font-weight: 500;
+  padding: 0 0 16px 0;
+}
+.modal__content {
+  padding-top: 32px;
+  height: calc(100% - 102px);
+}
+@media only screen and (min-width: 640px) {
+  .modal__content {
+    height: auto;
+  }
+}
+.modal__close {
+  background: #FFF;
+  border-radius: 50%;
+  cursor: pointer;
+  display: inline-block;
+  height: 40px;
+  float: right;
+  margin-right: -16px;
+  margin-top: -80px;
+  padding: 8px;
+  position: relative;
+  width: 40px;
+}
+@media only screen and (min-width: 640px) {
+  .modal__close {
+    margin: -32px -84px 0 0;
+  }
+}
+@media only screen and (min-width: 960px) {
+  .modal__close {
+    margin: -32px -104px 0 0;
+  }
+}
+.modal__close:before, .modal__close:after {
+  background-color: #303940;
+  content: "";
+  height: 25px;
+  left: 19px;
+  position: absolute;
+  width: 2px;
+}
+.modal__close:before {
+  transform: rotate(45deg);
+}
+.modal__close:after {
+  transform: rotate(-45deg);
+}
+.modal__footer {
+  align-items: center;
+  border-top: 1px solid #F4F7FA;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 1.5rem 0 0 0;
+}
+.modal__footer__item {
+  align-items: center;
+  display: flex;
+  margin-bottom: 1rem;
+  justify-content: center;
+  width: 100%;
+}
+@media only screen and (min-width: 480px) {
+  .modal__footer__item {
+    margin-bottom: 0;
+    justify-content: flex-start;
+    width: auto;
+  }
+}
+.modal__footer__item .button:not(:last-child) {
+  margin-right: 1rem;
+}
+@media only screen and (min-width: 640px) {
+  .modal--hasScroll .modal__container {
+    height: 100%;
+  }
+}
+.modal--hasScroll .modal__content {
+  margin-right: -16px;
+  padding-right: 10px;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+.modal--hasScroll .modal__content::-webkit-scrollbar {
+  -webkit-appearance: none;
+  width: 3px;
+}
+.modal--hasScroll .modal__content::-webkit-scrollbar-thumb {
+  -webkit-box-shadow: 0 0 1px rgba(255, 255, 255, 0.5);
+  background-color: #F4F7FA;
+  border-radius: 4px;
+}
+@media only screen and (min-width: 640px) {
+  .modal--hasScroll .modal__content {
+    height: calc(100% - 102px);
+    margin-right: -20px;
+  }
+}
+
+.card {
+  background: #FFF;
+  padding: 8px;
+  margin-bottom: 8px;
+}
+
+/*# sourceMappingURL=app.css.map */

@@ -1,0 +1,22 @@
+[{
+  "conference_date": "2019-05-10T10:30:00.000+0000",
+  "head_of_opc": { "id": "1a88156e-c660-43cb-92a9-e0104f93c708", "first_name": "Alejandro", "last_name": "1116" },
+  "id": 11,
+  "level": { "id": "f207efb7-24f0-48d4-9c41-948504948901", "name": "L2" },
+  "number_of_employees": 4,
+  "responsible_hr": { "id": "b9b7ba70-783b-317e-9998-dc4dd82eb3f4", "first_name": "Jane", "last_name": "1116" },
+  "status": "IN_PREPARATION",
+  "title": "L2_ECON_1116_2019_05 pepe",
+  "type": "DEVELOPMENT_DISCUSSION"
+},
+{
+  "conference_date": "2019-01-31T10:00:00.000+0000",
+  "head_of_opc": { "id": "1a88156e-c660-43cb-92a9-e0104f93c708", "first_name": "Alejandro", "last_name": "1116" },
+  "id": 9,
+  "level": { "id": "9d2c3c33-5015-4bc0-aac3-b885d4427207", "name": "L3" },
+  "number_of_employees": 4,
+  "responsible_hr": { "id": "b9b7ba70-783b-317e-9998-dc4dd82eb3f4", "first_name": "Jane", "last_name": "1116" },
+  "status": "COMPLETED",
+  "title": "L3_ECON_1116_2019_01",
+  "type": "DEVELOPMENT_DISCUSSION"
+}]
