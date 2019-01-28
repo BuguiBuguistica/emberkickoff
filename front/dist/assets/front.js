@@ -94,6 +94,35 @@
 
   _exports.default = _default;
 });
+;define("front/controllers/people", ["exports"], function (_exports) {
+  "use strict";
+
+  Object.defineProperty(_exports, "__esModule", {
+    value: true
+  });
+  _exports.default = void 0;
+
+  var _default = Ember.Controller.extend({
+    param: '',
+    peopleModel: Ember.computed('model', 'param', function () {
+      const param = this.get('param');
+
+      if (!param || param.length < 3) {
+        return this.get('model');
+      }
+
+      return this.get('model').filter(person => person.first_name.toLowerCase().includes(param));
+    }),
+    actions: {
+      onFilter(param) {
+        this.set('param', param);
+      }
+
+    }
+  });
+
+  _exports.default = _default;
+});
 ;define("front/helpers/app-version", ["exports", "front/config/environment", "ember-cli-app-version/utils/regexp"], function (_exports, _environment, _regexp) {
   "use strict";
 
@@ -609,6 +638,24 @@
   };
   _exports.default = _default;
 });
+;define("front/initializers/people", ["exports"], function (_exports) {
+  "use strict";
+
+  Object.defineProperty(_exports, "__esModule", {
+    value: true
+  });
+  _exports.initialize = initialize;
+  _exports.default = void 0;
+
+  function initialize(application) {
+    application.inject('route', 'peopleService', 'service:peopleService');
+  }
+
+  var _default = {
+    initialize
+  };
+  _exports.default = _default;
+});
 ;define("front/instance-initializers/ember-data", ["exports", "ember-data/initialize-store-service"], function (_exports, _initializeStoreService) {
   "use strict";
 
@@ -644,14 +691,13 @@
     rootURL: _environment.default.rootURL
   });
   Router.map(function () {
-    /* this.route('abot');
-    this.route('parent', function () {
+    this.route('conferences', {
+      path: '/'
     });
-    this.route('parent.child', { path: 'parent/child' });
-    this.route('todos', function () {
-        this.route('show', { path: '/:id' });
-    }); */
-    this.route('conferences');
+    this.route('peopleModel', {
+      path: '/people/:term'
+    });
+    this.route('people');
   });
   var _default = Router;
   _exports.default = _default;
@@ -670,6 +716,27 @@
     //conferenceService: service(),
     model() {
       return this.get('conferenceService').getConferences();
+    }
+
+  });
+
+  _exports.default = _default;
+});
+;define("front/routes/people", ["exports"], function (_exports) {
+  "use strict";
+
+  Object.defineProperty(_exports, "__esModule", {
+    value: true
+  });
+  _exports.default = void 0;
+
+  var _default = Ember.Route.extend({
+    model() {
+      return this.get('peopleService').getPeople();
+    },
+
+    setupController(controller, model) {
+      this._super(controller, model);
     }
 
   });
@@ -724,6 +791,24 @@
 
   _exports.default = _default;
 });
+;define("front/services/people-service", ["exports"], function (_exports) {
+  "use strict";
+
+  Object.defineProperty(_exports, "__esModule", {
+    value: true
+  });
+  _exports.default = void 0;
+
+  var _default = Ember.Service.extend({
+    getPeople() {
+      let response = Ember.$.getJSON(`/data/people.json`);
+      return response;
+    }
+
+  });
+
+  _exports.default = _default;
+});
 ;define("front/templates/application", ["exports"], function (_exports) {
   "use strict";
 
@@ -733,8 +818,8 @@
   _exports.default = void 0;
 
   var _default = Ember.HTMLBars.template({
-    "id": "1N0M/A43",
-    "block": "{\"symbols\":[],\"statements\":[[0,\"\\n\"],[4,\"link-to\",[\"conferences\"],null,{\"statements\":[[0,\"Conference\"]],\"parameters\":[]},null],[0,\"\\n\\n\"],[1,[21,\"outlet\"],false]],\"hasEval\":false}",
+    "id": "WJexO8y/",
+    "block": "{\"symbols\":[],\"statements\":[[7,\"div\"],[11,\"class\",\"wrapper\"],[9],[0,\"\\n  \"],[7,\"div\"],[11,\"class\",\"tabs\"],[9],[0,\"\\n    \"],[7,\"span\"],[9],[4,\"link-to\",[\"conferences\"],null,{\"statements\":[[0,\"Conference\"]],\"parameters\":[]},null],[10],[0,\"\\n    \"],[7,\"span\"],[9],[4,\"link-to\",[\"people\"],null,{\"statements\":[[0,\"People\"]],\"parameters\":[]},null],[10],[0,\"\\n  \"],[10],[0,\"\\n  \"],[1,[21,\"outlet\"],false],[0,\"\\n\"],[10]],\"hasEval\":false}",
     "meta": {
       "moduleName": "front/templates/application.hbs"
     }
@@ -751,8 +836,8 @@
   _exports.default = void 0;
 
   var _default = Ember.HTMLBars.template({
-    "id": "Y6rSyKms",
-    "block": "{\"symbols\":[\"&default\"],\"statements\":[[7,\"div\"],[11,\"class\",\"card\"],[9],[0,\"\\n  \"],[1,[23,[\"item\",\"title\"]],false],[0,\"\\n  \"],[1,[23,[\"item\",\"number_of_employees\"]],false],[0,\"\\n  \"],[1,[27,\"moment-format\",[[23,[\"item\",\"conference_date\"]],\"MM-DD-YYYY\"],null],false],[0,\"\\n  \"],[1,[23,[\"item\",\"head_of_opc\",\"first_name\"]],false],[1,[23,[\"item\",\"head_of_opc\",\"last_name\"]],false],[0,\"\\n  \"],[1,[23,[\"item\",\"responsible_hr\",\"first_name\"]],false],[1,[23,[\"item\",\"responsible_hr\",\"last_name\"]],false],[0,\"\\n\"],[10],[0,\"\\n\"],[14,1]],\"hasEval\":false}",
+    "id": "iPwgtECG",
+    "block": "{\"symbols\":[\"&default\"],\"statements\":[[7,\"div\"],[11,\"class\",\"card\"],[9],[0,\"\\n  \"],[7,\"div\"],[9],[0,\"\\n    \"],[1,[23,[\"item\",\"title\"]],false],[0,\"\\n  \"],[10],[0,\"\\n  \"],[7,\"div\"],[11,\"class\",\"card-wrapper\"],[9],[0,\"\\n    \"],[7,\"div\"],[11,\"class\",\"card-column\"],[9],[7,\"b\"],[9],[0,\"Employee:\"],[10],[0,\" \"],[1,[23,[\"item\",\"number_of_employees\"]],false],[10],[0,\"\\n    \"],[7,\"div\"],[11,\"class\",\"card-column\"],[9],[7,\"b\"],[9],[0,\"Date of conference:\"],[10],[0,\" \"],[1,[27,\"moment-format\",[[23,[\"item\",\"conference_date\"]],\"MM-DD-YYYY\"],null],false],[10],[0,\"\\n    \"],[7,\"div\"],[11,\"class\",\"card-column\"],[9],[7,\"b\"],[9],[0,\"Head of conference:\"],[10],[0,\" \"],[1,[23,[\"item\",\"head_of_opc\",\"first_name\"]],false],[1,[23,[\"item\",\"head_of_opc\",\"last_name\"]],false],[10],[0,\"\\n    \"],[7,\"div\"],[11,\"class\",\"card-column\"],[9],[7,\"b\"],[9],[0,\"Responsible HR BP:\"],[10],[0,\" \"],[1,[23,[\"item\",\"responsible_hr\",\"first_name\"]],false],[1,[23,[\"item\",\"responsible_hr\",\"last_name\"]],false],[10],[0,\"\\n  \"],[10],[0,\"\\n\"],[10],[0,\"\\n\"],[14,1]],\"hasEval\":false}",
     "meta": {
       "moduleName": "front/templates/components/conference-card.hbs"
     }
@@ -769,10 +854,28 @@
   _exports.default = void 0;
 
   var _default = Ember.HTMLBars.template({
-    "id": "G+GfJXEL",
-    "block": "{\"symbols\":[\"conference\"],\"statements\":[[4,\"each\",[[23,[\"model\"]]],null,{\"statements\":[[0,\"    \"],[4,\"if\",[[23,[\"show\"]]],null,{\"statements\":[[0,\" \"],[1,[27,\"conference-card\",null,[[\"item\"],[[22,1,[]]]]],false],[0,\" \"]],\"parameters\":[]},null],[0,\"\\n\"]],\"parameters\":[1]},null],[0,\"\\n\"],[1,[21,\"outlet\"],false]],\"hasEval\":false}",
+    "id": "Fbo4lu7g",
+    "block": "{\"symbols\":[\"conference\"],\"statements\":[[4,\"each\",[[23,[\"model\"]]],null,{\"statements\":[[0,\"  \"],[1,[27,\"conference-card\",null,[[\"item\"],[[22,1,[]]]]],false],[0,\"\\n\"]],\"parameters\":[1]},null],[0,\"\\n\"],[1,[21,\"outlet\"],false]],\"hasEval\":false}",
     "meta": {
       "moduleName": "front/templates/conferences.hbs"
+    }
+  });
+
+  _exports.default = _default;
+});
+;define("front/templates/people", ["exports"], function (_exports) {
+  "use strict";
+
+  Object.defineProperty(_exports, "__esModule", {
+    value: true
+  });
+  _exports.default = void 0;
+
+  var _default = Ember.HTMLBars.template({
+    "id": "8IvzLKKV",
+    "block": "{\"symbols\":[\"person\"],\"statements\":[[7,\"div\"],[9],[0,\"\\n  \"],[7,\"div\"],[11,\"class\",\"filter\"],[9],[0,\"\\n    \"],[7,\"form\"],[11,\"action\",\"\"],[11,\"class\",\"form\"],[9],[0,\"\\n\\n    \"],[1,[27,\"input\",null,[[\"type\",\"class\",\"placeholder\",\"value\",\"key-press\"],[\"text\",\"input\",\"Filter by name or lastname\",[23,[\"param\"]],[27,\"action\",[[22,0,[]],\"onFilter\"],null]]]],false],[0,\"\\n    \"],[10],[0,\"\\n  \"],[10],[0,\"\\n\"],[4,\"each\",[[23,[\"peopleModel\"]]],null,{\"statements\":[[0,\"  \"],[7,\"div\"],[11,\"class\",\"card\"],[9],[0,\"\\n    \"],[7,\"div\"],[11,\"class\",\"card-wrapper\"],[9],[0,\"\\n      \"],[7,\"div\"],[11,\"class\",\"card-column\"],[9],[0,\"\\n        \"],[7,\"span\"],[11,\"role\",\"image\"],[11,\"class\",\"avatar avatar--l\"],[11,\"style\",\"background-image: url('https://cdn-assets-eu.frontify.com/local/haufe/h_lNxVXLqrDqb2kyrixW3lMmUl7n-aBRzJUzyvzD7_8ZT8-w0Kl7FiAgddIV6WDy68nPxqKzxRF8Pzgzru9UCWiiZwWIWu_LDbBg8OsRziRQvc1kALTy6-uAByAypdMH?width=800');\"],[9],[10],[0,\"\\n      \"],[10],[0,\"\\n      \"],[7,\"div\"],[11,\"class\",\"card-column\"],[9],[0,\"\\n        \"],[1,[22,1,[\"first_name\"]],false],[0,\" \"],[1,[22,1,[\"last_name\"]],false],[0,\" \"],[7,\"br\"],[9],[10],[0,\"\\n        \"],[7,\"span\"],[11,\"class\",\"card-highlight\"],[9],[4,\"if\",[[22,1,[\"placements\",\"0\"]]],null,{\"statements\":[[0,\" \"],[1,[22,1,[\"level\",\"name\"]],false],[0,\" .\\n          \"],[1,[22,1,[\"placements\",\"0\",\"position\",\"title\"]],false],[0,\" \"]],\"parameters\":[]},null],[10],[0,\"\\n      \"],[10],[0,\"\\n      \"],[7,\"div\"],[11,\"class\",\"card-column\"],[9],[0,\"\\n        \"],[7,\"span\"],[9],[4,\"if\",[[22,1,[\"placements\",\"0\"]]],null,{\"statements\":[[0,\" \"],[1,[22,1,[\"placements\",\"0\",\"position\",\"department_abbreviation\"]],false],[0,\" \"]],\"parameters\":[]},null],[10],[0,\"\\n      \"],[10],[0,\"\\n      \"],[7,\"div\"],[11,\"class\",\"card-column\"],[9],[0,\"\\n        \"],[7,\"span\"],[9],[1,[22,1,[\"primary_manager_identity\",\"first_name\"]],false],[0,\" \"],[1,[22,1,[\"primary_manager_identity\",\"last_name\"]],false],[10],[0,\"\\n      \"],[10],[0,\"\\n    \"],[10],[0,\"\\n  \"],[10],[0,\"\\n\"]],\"parameters\":[1]},null],[10],[0,\"\\n\"],[1,[21,\"outlet\"],false]],\"hasEval\":false}",
+    "meta": {
+      "moduleName": "front/templates/people.hbs"
     }
   });
 

@@ -1,5 +1,17 @@
 .card {
   background: $c-white;
-  padding: cell(2);
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  padding: cell(4);
   margin-bottom: cell(2);
+  &-wrapper {
+    display: flex;
+  }
+  &-column {
+    margin: cell(2);
+    padding: cell(4);
+  }
+  &-highlight {
+    color: $c-blue
+  }
 }

@@ -1699,8 +1699,48 @@ section:hover .carousel .carouselHeading button.action {
 
 .card {
   background: #FFF;
-  padding: 8px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  padding: 16px;
   margin-bottom: 8px;
+}
+.card-wrapper {
+  display: flex;
+}
+.card-column {
+  margin: 8px;
+  padding: 16px;
+}
+.card-highlight {
+  color: #386F9D;
+}
+
+.wrapper {
+  padding: 0 15%;
+}
+
+.tabs {
+  padding: 16px;
+  margin-bottom: 16px;
+}
+.tabs span {
+  padding: 0 8px;
+}
+.tabs a {
+  padding: 0 8px;
+  text-transform: uppercase;
+}
+.tabs a.active {
+  border-bottom: 2px solid;
+}
+
+.filter {
+  display: block;
+  margin-bottom: 48px;
+  width: 100%;
+}
+.filter input {
+  width: 60%;
 }
 
 /*# sourceMappingURL=app.css.map */

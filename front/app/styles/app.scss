@@ -1,3 +1,35 @@
 
 @import "@haufe-umantis/styles/people-os/base";
 @import "./components/card";
+
+.wrapper {
+  padding: 0 15%;
+}
+
+.tabs {
+  padding: cell(4);
+  margin-bottom:  cell(4); 
+
+  span {
+    padding: 0 cell(2);
+  }
+
+  a {
+    padding: 0 cell(2);
+    text-transform: uppercase;
+  }
+
+  a.active {
+    border-bottom: 2px solid 
+  }
+}
+
+.filter {
+  display: block;
+  margin-bottom: cell(12);
+  width: 100%;
+
+  input {
+    width: 60%;
+  }
+}

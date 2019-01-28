@@ -1,5 +1,5 @@
-  {{#each model as |conference|}}
-    {{#if show}} {{conference-card item=conference}} {{/if}}
-  {{/each}}
+{{#each model as |conference|}}
+  {{conference-card item=conference}}
+{{/each}}
 
 {{outlet}}

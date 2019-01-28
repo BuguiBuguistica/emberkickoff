@@ -1,0 +1,77 @@
+[
+  {
+    "company_name": null,
+    "first_name": "Edith",
+    "gender": null,
+    "id": "1068c3ed-1287-40ec-af6b-95a3c992abed",
+    "last_name": "1116",
+    "level": {
+      "id": "451cd685-c98d-4044-a021-50f788da28d1",
+      "name": "L1"
+    },
+    "placements": [
+      {
+        "position": {
+          "title": "Web Developer",
+          "organizational_unit": null,
+          "department_abbreviation": "DEV"
+        }
+      }
+    ],
+    "statistics": null,
+    "primary_manager_identity": {
+      "first_name": "Martha",
+      "last_name": "1116"
+    }
+  },
+  {
+    "company_name": null,
+    "first_name": "Sara",
+    "gender": null,
+    "id": "1068c3ed-1287-40ec-af6b-95a3c992abed",
+    "last_name": "MacStand",
+    "level": {
+      "id": "451cd685-c98d-4044-a021-50f788da28d1",
+      "name": "L2"
+    },
+    "placements": [
+      {
+        "position": {
+          "title": "Manager",
+          "organizational_unit": null,
+          "department_abbreviation": "MANA"
+        }
+      }
+    ],
+    "statistics": null,
+    "primary_manager_identity": {
+      "first_name": "Juana",
+      "last_name": "LaLoca"
+    }
+  },
+  {
+    "company_name": null,
+    "first_name": "Bob",
+    "gender": null,
+    "id": "1068c3ed-1287-40ec-af6b-95a3c992abed",
+    "last_name": "Dylan",
+    "level": {
+      "id": "451cd685-c98d-4044-a021-50f788da28d1",
+      "name": "L3"
+    },
+    "placements": [
+      {
+        "position": {
+          "title": "Musician",
+          "organizational_unit": null,
+          "department_abbreviation": "Mus"
+        }
+      }
+    ],
+    "statistics": null,
+    "primary_manager_identity": {
+      "first_name": "Luis",
+      "last_name": "Amstrong"
+    }
+  }
+]

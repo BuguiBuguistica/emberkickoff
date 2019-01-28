@@ -7,14 +7,9 @@ const Router = EmberRouter.extend({
 });
 
 Router.map(function () {
-  /* this.route('abot');
-  this.route('parent', function () {
-  });
-  this.route('parent.child', { path: 'parent/child' });
-  this.route('todos', function () {
-      this.route('show', { path: '/:id' });
-  }); */
-  this.route('conferences');
+  this.route('conferences',  {path:'/'});
+  this.route('peopleModel', {path:'/people/:term'});
+  this.route('people'); 
 });
 
 export default Router;
