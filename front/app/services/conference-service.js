@@ -1,9 +1,9 @@
 import Service from '@ember/service';
-import Ember from 'ember';
+import $ from 'jquery'
 
 export default Service.extend({
   getConferences() {
-    let response = Ember.$.getJSON(`/data/conferences.json`);
+    let response = $.getJSON(`/data/conferences.json`);
     return response;
   }
 });

@@ -24,54 +24,6 @@ define("front/tests/integration/components/conference-card-test", ["qunit", "emb
     });
   });
 });
-define("front/tests/integration/components/x-alert-test", ["qunit", "ember-qunit", "@ember/test-helpers"], function (_qunit, _emberQunit, _testHelpers) {
-  "use strict";
-
-  (0, _qunit.module)('Integration | Component | x-alert', function (hooks) {
-    (0, _emberQunit.setupRenderingTest)(hooks);
-    (0, _qunit.test)('it renders', async function (assert) {
-      // Set any properties with this.set('myProperty', 'value');
-      // Handle any actions with this.set('myAction', function(val) { ... });
-      await (0, _testHelpers.render)(Ember.HTMLBars.template({
-        "id": "qqPW/gNE",
-        "block": "{\"symbols\":[],\"statements\":[[1,[21,\"x-alert\"],false]],\"hasEval\":false}",
-        "meta": {}
-      }));
-      assert.equal(this.element.textContent.trim(), ''); // Template block usage:
-
-      await (0, _testHelpers.render)(Ember.HTMLBars.template({
-        "id": "JMdyujq4",
-        "block": "{\"symbols\":[],\"statements\":[[0,\"\\n\"],[4,\"x-alert\",null,null,{\"statements\":[[0,\"        template block text\\n\"]],\"parameters\":[]},null],[0,\"    \"]],\"hasEval\":false}",
-        "meta": {}
-      }));
-      assert.equal(this.element.textContent.trim(), 'template block text');
-    });
-  });
-});
-define("front/tests/integration/components/x-counter-test", ["qunit", "ember-qunit", "@ember/test-helpers"], function (_qunit, _emberQunit, _testHelpers) {
-  "use strict";
-
-  (0, _qunit.module)('Integration | Component | x-counter', function (hooks) {
-    (0, _emberQunit.setupRenderingTest)(hooks);
-    (0, _qunit.test)('it renders', async function (assert) {
-      // Set any properties with this.set('myProperty', 'value');
-      // Handle any actions with this.set('myAction', function(val) { ... });
-      await (0, _testHelpers.render)(Ember.HTMLBars.template({
-        "id": "quC+NXYA",
-        "block": "{\"symbols\":[],\"statements\":[[1,[21,\"x-counter\"],false]],\"hasEval\":false}",
-        "meta": {}
-      }));
-      assert.equal(this.element.textContent.trim(), ''); // Template block usage:
-
-      await (0, _testHelpers.render)(Ember.HTMLBars.template({
-        "id": "nUama9vs",
-        "block": "{\"symbols\":[],\"statements\":[[0,\"\\n\"],[4,\"x-counter\",null,null,{\"statements\":[[0,\"        template block text\\n\"]],\"parameters\":[]},null],[0,\"    \"]],\"hasEval\":false}",
-        "meta": {}
-      }));
-      assert.equal(this.element.textContent.trim(), 'template block text');
-    });
-  });
-});
 define("front/tests/lint/app.lint-test", [], function () {
   "use strict";
 
@@ -94,7 +46,7 @@ define("front/tests/lint/app.lint-test", [], function () {
   });
   QUnit.test('controllers/people.js', function (assert) {
     assert.expect(1);
-    assert.ok(false, 'controllers/people.js should pass ESLint\n\n5:16 - Use import { computed } from \'@ember/object\'; instead of using Ember.computed (ember/new-module-imports)\n5:16 - \'Ember\' is not defined. (no-undef)');
+    assert.ok(true, 'controllers/people.js should pass ESLint\n\n');
   });
   QUnit.test('initializers/conferences.js', function (assert) {
     assert.expect(1);
@@ -110,7 +62,7 @@ define("front/tests/lint/app.lint-test", [], function () {
   });
   QUnit.test('router.js', function (assert) {
     assert.expect(1);
-    assert.ok(false, 'router.js should pass ESLint\n\n11:3 - Unexpected capital letter in route\'s name (ember/no-capital-letters-in-routes)');
+    assert.ok(true, 'router.js should pass ESLint\n\n');
   });
   QUnit.test('routes/conferences.js', function (assert) {
     assert.expect(1);
@@ -122,11 +74,11 @@ define("front/tests/lint/app.lint-test", [], function () {
   });
   QUnit.test('services/conference-service.js', function (assert) {
     assert.expect(1);
-    assert.ok(false, 'services/conference-service.js should pass ESLint\n\n6:20 - Use import $ from \'jquery\'; instead of using Ember.$ (ember/new-module-imports)');
+    assert.ok(true, 'services/conference-service.js should pass ESLint\n\n');
   });
   QUnit.test('services/people-service.js', function (assert) {
     assert.expect(1);
-    assert.ok(false, 'services/people-service.js should pass ESLint\n\n5:20 - Use import $ from \'jquery\'; instead of using Ember.$ (ember/new-module-imports)\n5:20 - \'Ember\' is not defined. (no-undef)');
+    assert.ok(true, 'services/people-service.js should pass ESLint\n\n');
   });
 });
 define("front/tests/lint/templates.template.lint-test", [], function () {
@@ -135,11 +87,11 @@ define("front/tests/lint/templates.template.lint-test", [], function () {
   QUnit.module('TemplateLint');
   QUnit.test('front/templates/application.hbs', function (assert) {
     assert.expect(1);
-    assert.ok(false, 'front/templates/application.hbs should pass TemplateLint.\n\nfront/templates/application.hbs\n  3:20  error  you must use double quotes in templates  quotes\n  3:33  error  you must use double quotes in templates  quotes\n  4:20  error  you must use double quotes in templates  quotes\n  4:29  error  you must use double quotes in templates  quotes\n');
+    assert.ok(true, 'front/templates/application.hbs should pass TemplateLint.\n\n');
   });
   QUnit.test('front/templates/components/conference-card.hbs', function (assert) {
     assert.expect(1);
-    assert.ok(false, 'front/templates/components/conference-card.hbs should pass TemplateLint.\n\nfront/templates/components/conference-card.hbs\n  7:93  error  you must use double quotes in templates  quotes\n');
+    assert.ok(true, 'front/templates/components/conference-card.hbs should pass TemplateLint.\n\n');
   });
   QUnit.test('front/templates/conferences.hbs', function (assert) {
     assert.expect(1);
@@ -147,7 +99,7 @@ define("front/tests/lint/templates.template.lint-test", [], function () {
   });
   QUnit.test('front/templates/people.hbs', function (assert) {
     assert.expect(1);
-    assert.ok(false, 'front/templates/people.hbs should pass TemplateLint.\n\nfront/templates/people.hbs\n  5:4  error  Incorrect indentation for `{{input}}` beginning at L5:C4. Expected `{{input}}` to be at an indentation of 6 but was found at 4.  block-indentation\n  10:2  error  Incorrect indentation for `<div>` beginning at L10:C2. Expected `<div>` to be at an indentation of 4 but was found at 2.  block-indentation\n  18:65  error  Incorrect indentation for `span` beginning at L17:C8. Expected `</span>` ending at L18:C65 to be at an indentation of 8 but was found at 58.  block-indentation\n  17:37  error  Incorrect indentation for `{{#if}}` beginning at L17:C37. Expected `{{#if}}` to be at an indentation of 10 but was found at 37.  block-indentation\n  18:58  error  Incorrect indentation for `if` beginning at L17:C37. Expected `{{/if}}` ending at L18:C58 to be at an indentation of 37 but was found at 51.  block-indentation\n  17:67  error  Incorrect indentation for `{{person.level.name}}` beginning at L17:C67. Expected `{{person.level.name}}` to be at an indentation of 39 but was found at 67.  block-indentation\n  18:10  error  Incorrect indentation for `{{person.placements.0.position.title}}` beginning at L18:C10. Expected `{{person.placements.0.position.title}}` to be at an indentation of 39 but was found at 10.  block-indentation\n  13:52  error  elements cannot have inline styles  no-inline-styles\n');
+    assert.ok(true, 'front/templates/people.hbs should pass TemplateLint.\n\n');
   });
 });
 define("front/tests/lint/tests.lint-test", [], function () {
@@ -157,14 +109,6 @@ define("front/tests/lint/tests.lint-test", [], function () {
   QUnit.test('integration/components/conference-card-test.js', function (assert) {
     assert.expect(1);
     assert.ok(true, 'integration/components/conference-card-test.js should pass ESLint\n\n');
-  });
-  QUnit.test('integration/components/x-alert-test.js', function (assert) {
-    assert.expect(1);
-    assert.ok(true, 'integration/components/x-alert-test.js should pass ESLint\n\n');
-  });
-  QUnit.test('integration/components/x-counter-test.js', function (assert) {
-    assert.expect(1);
-    assert.ok(true, 'integration/components/x-counter-test.js should pass ESLint\n\n');
   });
   QUnit.test('test-helper.js', function (assert) {
     assert.expect(1);

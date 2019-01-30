@@ -1743,4 +1743,8 @@ section:hover .carousel .carouselHeading button.action {
   width: 60%;
 }
 
+.default-avatar {
+  background-image: url("https://cdn-assets-eu.frontify.com/local/haufe/h_lNxVXLqrDqb2kyrixW3lMmUl7n-aBRzJUzyvzD7_8ZT8-w0Kl7FiAgddIV6WDy68nPxqKzxRF8Pzgzru9UCWiiZwWIWu_LDbBg8OsRziRQvc1kALTy6-uAByAypdMH?width=800");
+}
+
 /*# sourceMappingURL=app.css.map */

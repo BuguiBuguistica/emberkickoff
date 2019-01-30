@@ -8,7 +8,6 @@ const Router = EmberRouter.extend({
 
 Router.map(function () {
   this.route('conferences',  {path:'/'});
-  this.route('peopleModel', {path:'/people/:term'});
   this.route('people'); 
 });
 
