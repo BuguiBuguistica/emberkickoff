@@ -6,29 +6,35 @@
     </form>
   </div>
   {{#each peopleModel as |person|}}
-    <div class="card">
-      <div class="card-wrapper">
-        <div class="card-column">
-          <span role="image" class="default-avatar avatar avatar--l"></span>
-        </div>
-        <div class="card-column">
-          {{person.first_name}} {{person.last_name}} <br>
-          <span class="card-highlight">
-            {{#if person.placements.[0]}} 
-              {{person.level.name}}
-              {{person.placements.[0].position.title}} 
-            {{/if}}
-          </span>
-        </div>
-        <div class="card-column">
-          <span>
-            {{#if person.placements.[0]}} {{person.placements.[0].position.department_abbreviation}} {{/if}}
-          </span>
-        </div>
-        <div class="card-column">
-          <span>
-            {{person.primary_manager_identity.first_name}} {{person.primary_manager_identity.last_name}}
-          </span>
+    <div viewmode="list">
+      <div class="card-datalist">
+        <div class="content">
+          <div class="content__datalist">
+            <ul>
+              <li class="card-column">
+                <span role="image" class="default-avatar avatar avatar--l"></span>
+              </li>
+              <li class="card-column">
+                {{person.first_name}} {{person.last_name}} <br>
+                <span class="card-highlight">
+                  {{#if person.placements.[0]}}
+                    {{person.level.name}}
+                    {{person.placements.[0].position.title}}
+                  {{/if}}
+                </span>
+              </li>
+              <li class="card-column">
+                <span>
+                  {{#if person.placements.[0]}} {{person.placements.[0].position.department_abbreviation}} {{/if}}
+                </span>
+              </li>
+              <li class="card-column">
+                <span>
+                  {{person.primary_manager_identity.first_name}} {{person.primary_manager_identity.last_name}}
+                </span>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>

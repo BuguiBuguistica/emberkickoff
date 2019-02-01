@@ -1,7 +1,15 @@
 <div class="wrapper">
-  <div class="tabs">
+  {{!-- <div class="tabs">
     <span>{{link-to "Conference" "conferences"}}</span>
     <span>{{link-to "People" "people"}}</span>
+  </div> --}}
+  <div class="tabs">
+    <div class="tabs__scroll">
+      <div role="tablist">
+        <span role="tab">{{link-to "Conference" "conferences"}}</span>
+        <span role="tab">{{link-to "People" "people"}}</span>
+      </div>
+    </div>
   </div>
   {{outlet}}
 </div>

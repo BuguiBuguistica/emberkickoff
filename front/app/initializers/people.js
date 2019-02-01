@@ -3,5 +3,6 @@ export function initialize(application) {
 }
 
 export default {
+  name: 'peopleService',
   initialize
 };

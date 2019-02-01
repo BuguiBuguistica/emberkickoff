@@ -1,4 +1,5 @@
 @charset "UTF-8";
+@import "template-list";
 @font-face {
   font-family: "Avenir Next";
   src: url("~@haufe-umantis/styles/assets/fonts/avenir-next/AvenirNextThin.eot");
@@ -224,7 +225,7 @@ b, strong {
   border: solid 1px #F4F7FA;
 }
 
-.carousel .carousel__back button, .carousel .ccard__content dl dd, .listbox-person__content .row:first-child > *:not(.tag), .listbox-item > *, .carousel .responsiveDropdown button span, .listbox-person__content .row:last-child > *:not(.tag), .carousel .ccard__content dl dt {
+.carousel .carousel__back button, .carousel .ccard__content dl dd, .carousel .responsiveDropdown button span, .carousel .ccard__content dl dt, .card-datalist .content__title {
   font-family: inherit;
   font-size: inherit;
   font-stretch: normal;
@@ -239,13 +240,13 @@ b, strong {
   line-height: 1.5;
 }
 
-.listbox-person__content .row:first-child > *:not(.tag), .listbox-item > *, .carousel .responsiveDropdown button span {
+.carousel .responsiveDropdown button span {
   font-size: 14px;
   font-weight: 500;
   line-height: 1.43;
 }
 
-.listbox-person__content .row:last-child > *:not(.tag), .carousel .ccard__content dl dt {
+.carousel .ccard__content dl dt {
   font-size: 13px;
   font-weight: 500;
   line-height: 1.23;
@@ -270,6 +271,20 @@ b, strong {
   line-height: 1.2307692308;
 }
 
+.card-datalist .content__title {
+  color: #303940;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+.card-datalist .content__datalist li {
+  color: #6C7880;
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 1.23;
+}
+
 .avatar {
   align-items: center;
   background-color: #F4F7FA;
@@ -280,8 +295,8 @@ b, strong {
   justify-content: center;
   text-transform: uppercase;
 }
-.avatar[style] {
-  border-color: #FFF;
+.avatar[style], .avatar[src] {
+  border: 0;
   font-size: 0;
 }
 .avatar--s {
@@ -317,13 +332,69 @@ b, strong {
   cursor: pointer;
   border-color: #386F9D;
 }
+.avatar--team {
+  display: inline-block;
+  line-height: 1;
+}
+.avatar--team svg path, .avatar--team svg rect, .avatar--team svg g {
+  fill: none;
+}
+.avatar--team svg path[has-fill], .avatar--team svg rect[has-fill], .avatar--team svg g[has-fill] {
+  fill: #4d555c;
+}
+.avatar--team svg path[has-stroke], .avatar--team svg rect[has-stroke], .avatar--team svg g[has-stroke] {
+  stroke: #42525c;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 1.5px;
+}
+.avatar--team.avatar--s svg svg path, .avatar--team.avatar--s svg svg rect, .avatar--team.avatar--s svg svg g {
+  stroke-width: 1.5px;
+}
+.avatar--team.avatar--s svg, .avatar--team.avatar--s svg svg {
+  height: 16px;
+  width: 16px;
+}
+.avatar--team.avatar--m svg svg path, .avatar--team.avatar--m svg svg rect, .avatar--team.avatar--m svg svg g {
+  stroke-width: 1.5px;
+}
+.avatar--team.avatar--m svg, .avatar--team.avatar--m svg svg {
+  height: 24px;
+  width: 24px;
+}
+.avatar--team.avatar--l svg svg path, .avatar--team.avatar--l svg svg rect, .avatar--team.avatar--l svg svg g, .avatar--team.avatar--xl svg svg path, .avatar--team.avatar--xl svg svg rect, .avatar--team.avatar--xl svg svg g {
+  stroke-width: 1.75px;
+}
+.avatar--team.avatar--l svg, .avatar--team.avatar--l svg svg, .avatar--team.avatar--xl svg, .avatar--team.avatar--xl svg svg {
+  height: 32px;
+  width: 32px;
+}
 
 .avatar-group {
   display: flex;
   flex-direction: row;
 }
-.avatar-group li:not(:first-child) .avatar {
-  margin-left: -6px;
+.avatar-group li {
+  border: 2px solid #FFF;
+  border-radius: 50%;
+}
+.avatar-group li:not(:first-child) {
+  margin-left: -8px;
+}
+.avatar-group li:nth-child(1) {
+  z-index: 5;
+}
+.avatar-group li:nth-child(2) {
+  z-index: 4;
+}
+.avatar-group li:nth-child(3) {
+  z-index: 3;
+}
+.avatar-group li:nth-child(4) {
+  z-index: 2;
+}
+.avatar-group li:nth-child(5) {
+  z-index: 1;
 }
 
 /**
@@ -457,7 +528,7 @@ b, strong {
   background: #CC3D3D;
   color: #FFF;
   font-size: 8px;
-  font-weight: bold;
+  font-weight: 700;
   margin-left: 8px;
   padding: 0 4px;
   text-transform: uppercase;
@@ -612,6 +683,51 @@ b, strong {
 
 .button.button--main[disabled], .button.button--main.is-disable, .button.button--main[aria-disabled=true], .button.button--secondary[disabled], .button.button--secondary.is-disable, .button.button--secondary[aria-disabled=true], .button.button--alternative[disabled], .button.button--alternative.is-disable, .button.button--alternative[aria-disabled=true], .button.button--error[disabled], .button.button--error.is-disable, .button.button--error[aria-disabled=true] {
   opacity: 0.5;
+}
+
+.icon {
+  display: inline-block;
+  line-height: 1;
+}
+.icon svg path, .icon svg rect, .icon svg g {
+  fill: none;
+}
+.icon svg path[has-fill], .icon svg rect[has-fill], .icon svg g[has-fill] {
+  fill: #4d555c;
+}
+.icon svg path[has-stroke], .icon svg rect[has-stroke], .icon svg g[has-stroke] {
+  stroke: #42525c;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 1.5px;
+}
+.icon--s svg path, .icon--s svg rect, .icon--s svg g {
+  stroke-width: 1.5px;
+}
+.icon--s, .icon--s svg {
+  height: 16px;
+  width: 16px;
+}
+.icon--m svg path, .icon--m svg rect, .icon--m svg g {
+  stroke-width: 1.5px;
+}
+.icon--m, .icon--m svg {
+  height: 24px;
+  width: 24px;
+}
+.icon--l svg path, .icon--l svg rect, .icon--l svg g {
+  stroke-width: 1.75px;
+}
+.icon--l, .icon--l svg {
+  height: 32px;
+  width: 32px;
+}
+.icon--xl svg path, .icon--xl svg rect, .icon--xl svg g {
+  stroke-width: 2px;
+}
+.icon--xl, .icon--xl svg {
+  height: 40px;
+  width: 40px;
 }
 
 /**
@@ -1362,15 +1478,98 @@ section:hover .carousel .carouselHeading button.action {
   }
 }
 
-.dropdown {
-  background: #FFF;
+/**
+ * Card Data List
+ * Use `.card-list` class. Could be placed to a component eg. <mdv-report class="card-datalist"/>
+ * or just do into the listing scss @extend .card-datalist
+ * Attributes: `status` for change style of elements inside, eg. atoms/status.
+ * Support: viewmode[ card | list ]
+ *
+ *    @example
+ *    <div class="card-datalist" [viewmode="list"]>
+ *      <div class="content" [attr.status]="completed">
+ *        <div class="content__title">Title</div>
+ *        <div class="content__datalist">
+ *        <ul>
+ *          <li>
+ *             <b>Employee</b>
+ *             Tom Coleman
+ *           </li>
+ *           <li>
+ *             <b>Date of conference</b>
+ *             05-10-2019
+ *           </li>
+ *           <li>
+ *             <b>Head of conference:</b>
+ *             Susan
+ *           </li>
+ *         </ul>
+ *        </div>
+ *      </div>
+ *    </div>
+ **/
+.card-datalist {
+  background-color: #FFF;
   border-radius: 4px;
-  border: solid 1px #F4F7FA;
-  box-shadow: 0 2px 14px 0 rgba(0, 0, 0, 0.07);
-  margin-top: 8px;
-  position: absolute;
-  width: 100%;
-  z-index: 10;
+  border: 1px solid #DCE1E6;
+  box-sizing: border-box;
+  display: block;
+  padding: 20px;
+  position: relative;
+  transition: all ease-in-out 0.15s;
+  width: auto;
+  cursor: pointer;
+}
+.card-datalist:hover {
+  box-shadow: 0px 12px 20px -15px #303940;
+}
+.card-datalist .content {
+  display: flex;
+  flex-direction: column;
+}
+.card-datalist .content__title {
+  flex-grow: 1;
+}
+.card-datalist .content__datalist {
+  padding-top: 16px;
+}
+.card-datalist .content__datalist ul {
+  display: flex;
+}
+.card-datalist .content__datalist li {
+  flex-grow: 1;
+}
+.card-datalist .content__datalist li b {
+  display: block;
+  margin-bottom: 4px;
+}
+.card-datalist .content__datalist li b:after {
+  content: ":";
+}
+@media only screen and (max-width: 599px) {
+  *[viewmode=list] .card-datalist .content {
+    flex-direction: column;
+  }
+  *[viewmode=list] .card-datalist .content__datalist ul {
+    flex-direction: column;
+  }
+  *[viewmode=list] .card-datalist .content__datalist ul li:not(:last-child) {
+    padding-bottom: 16px;
+  }
+}
+@media only screen and (min-width: 600px) {
+  *[viewmode=list] .card-datalist .content__datalist ul {
+    flex-direction: row;
+  }
+}
+*[viewmode=card] .card-datalist .content {
+  flex-direction: column;
+}
+*[viewmode=card] .card-datalist .content__datalist ul {
+  flex-direction: column;
+}
+*[viewmode=card] .card-datalist .content__datalist ul li:not(:last-child) {
+  padding-bottom: 16px;
 }
 
 /**
@@ -1385,9 +1584,10 @@ section:hover .carousel .carouselHeading button.action {
   margin-bottom: 8px;
 }
 .form .input, .form input[type=text], .form input[type=password], .form input[type=name], .form input[type=email], .form input[type=tel], .form input[type=datetime], .form input[type=number] {
-  border: solid 1px #F4F7FA;
-  border-radius: 2px;
+  border: solid 1px #DCE1E6;
+  border-radius: 4px;
   color: #303940;
+  width: 100%;
   font-family: "Avenir Next", "Open Sans", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Microsoft Yahei", "微软雅黑", STXihei, "华文细黑", sans-serif;
   font-size: 14px;
   font-weight: 500;
@@ -1410,14 +1610,16 @@ section:hover .carousel .carouselHeading button.action {
   border-color: #386F9D;
 }
 .form textarea, .form .textarea {
-  border: solid 1px #F4F7FA;
-  border-radius: 2px;
+  border: solid 1px #DCE1E6;
+  border-radius: 4px;
   color: #303940;
+  width: 100%;
   font-family: "Avenir Next", "Open Sans", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Microsoft Yahei", "微软雅黑", STXihei, "华文细黑", sans-serif;
-  font-size: 14px;
-  font-weight: 500;
-  line-height: 1.14;
-  padding: 16px;
+  font-size: 16px;
+  font-weight: normal;
+  line-height: 1.5;
+  padding: 23px 31px;
+  resize: none;
   transition: border-color ease-in-out 0.3s;
 }
 .form textarea[placeholder], .form .textarea[placeholder] {
@@ -1442,106 +1644,6 @@ section:hover .carousel .carouselHeading button.action {
   clear: both;
   display: block;
   margin-bottom: 24px;
-}
-
-.listbox-item {
-  display: flex;
-  flex-direction: row;
-  padding: 4px;
-  width: 100%;
-  cursor: pointer;
-}
-.listbox-item:hover {
-  color: #386F9D;
-}
-.listbox-item:hover > * {
-  background: #F4F7FA;
-}
-.listbox-item > * {
-  padding: 12px 20px;
-  width: 100%;
-}
-.listbox-item[aria-disabled=true] {
-  cursor: not-allowed;
-  opacity: 0.5;
-}
-
-.listbox-person {
-  display: flex;
-  flex-direction: row;
-  padding: 4px;
-  width: 100%;
-  cursor: pointer;
-}
-.listbox-person:hover > * {
-  background: #F4F7FA;
-}
-.listbox-person:hover .row:first-child span:first-child {
-  color: #386F9D;
-}
-.listbox-person__avatar {
-  align-items: center;
-  display: flex;
-  justify-content: center;
-  padding: 0 8px;
-}
-@media only screen and (min-width: 480px) {
-  .listbox-person__avatar {
-    padding: 0 16px;
-  }
-}
-.listbox-person__avatar > * {
-  align-items: center;
-  background-color: #F4F7FA;
-  border-radius: 50%;
-  border: 1px solid #6C7880;
-  color: #303940;
-  display: flex;
-  justify-content: center;
-  text-transform: uppercase;
-  background-size: 24px;
-  height: 24px;
-  width: 24px;
-  font-size: 10px;
-  font-weight: 600;
-}
-.listbox-person__avatar > *[style] {
-  border-color: #FFF;
-  font-size: 0;
-}
-.listbox-person__content {
-  display: flex;
-  flex-direction: column;
-  flex-grow: 1;
-}
-.listbox-person__content .row {
-  line-height: 1;
-}
-.listbox-person__content .row > * {
-  margin: 0 12px 0 0;
-}
-.listbox-person__content .row .tag {
-  margin-top: 4px;
-  margin-down: 4px;
-}
-.listbox-person__content .row:first-child {
-  margin-top: 8px;
-  margin-bottom: 4px;
-}
-@media only screen and (max-width: 479px) {
-  .listbox-person__content .row:first-child > *:not(.tag) {
-    display: block;
-  }
-}
-.listbox-person__content .row:last-child {
-  margin-bottom: 8px;
-}
-.listbox-person__content .row:last-child > *:not(.tag) {
-  color: #6C7880;
-}
-.listbox-person[aria-disabled=true] {
-  cursor: not-allowed;
-  opacity: 0.5;
 }
 
 .modal {
@@ -1697,41 +1799,82 @@ section:hover .carousel .carouselHeading button.action {
   }
 }
 
-.card {
-  background: #FFF;
-  border-radius: 4px;
-  border: 1px solid #ccc;
-  padding: 16px;
-  margin-bottom: 8px;
+/**
+ * Tabs:
+ *
+ *     @example
+
+<div class="tabs">
+  <div class="tabs__scroll">
+    <div role="tablist">
+      <button aria-selected="true" role="tab" aria-controls="panel1" tab-index="0" id="tab1">Tab 1</button>
+      <button role="tab" aria-controls="panel2" tab-index="0" id="tab2">Tab 2</button>
+      <button role="tab" aria-controls="panel3" tab-index="0" id="tab3">Tab 3</button>
+    </div>
+  </div>
+  <div role="tabpanel" id="panel1" aria-labelledby="tab1">Content for the Tab 1</div>
+  <div role="tabpanel" id="panel2" aria-hidden="true" aria-labelledby="tab2">Panel 2 content here</div>
+  <div role="tabpanel" id="panel3" aria-hidden="true" aria-labelledby="tab3">Panel 3 content here</div>
+</div>
+
+ */
+.tabs {
+  display: block;
+  position: relative;
+  width: 100%;
 }
-.card-wrapper {
+.tabs__scroll {
+  overflow-x: scroll;
+  overflow-y: hidden;
+  width: 100%;
+}
+.tabs__scroll::-webkit-scrollbar {
+  display: none;
+}
+.tabs__scroll > * {
+  min-width: max-content;
+}
+.tabs__scroll > *[role=tablist] {
+  border-bottom: 1px solid #F4F7FA;
   display: flex;
+  width: fit-content;
 }
-.card-column {
-  margin: 8px;
-  padding: 16px;
+.tabs__scroll > *[role=tablist] > *[role=tab] {
+  background: transparent;
+  border-bottom: 2px solid transparent;
+  color: #DCE1E6;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 600;
+  family: inherit;
+  letter-spacing: 0.3px;
+  margin: 24px 24px -1px 24px;
+  padding-bottom: 16px;
+  text-transform: uppercase;
 }
-.card-highlight {
-  color: #386F9D;
+.tabs__scroll > *[role=tablist] > *[role=tab][aria-selected=true] {
+  border-color: #386F9D;
+  color: #245278;
+}
+.tabs > *[role=tabpanel] {
+  display: block;
+  position: relative;
+  width: 100%;
+}
+.tabs > *[role=tabpanel][aria-hidden=true] {
+  display: none;
 }
 
 .wrapper {
   padding: 0 15%;
 }
 
-.tabs {
-  padding: 16px;
-  margin-bottom: 16px;
-}
-.tabs span {
-  padding: 0 8px;
-}
 .tabs a {
-  padding: 0 8px;
-  text-transform: uppercase;
+  padding-bottom: 8px;
 }
 .tabs a.active {
-  border-bottom: 2px solid;
+  border-bottom: 2px solid #386F9D;
+  color: #245278;
 }
 
 .filter {
@@ -1745,6 +1888,10 @@ section:hover .carousel .carouselHeading button.action {
 
 .default-avatar {
   background-image: url("https://cdn-assets-eu.frontify.com/local/haufe/h_lNxVXLqrDqb2kyrixW3lMmUl7n-aBRzJUzyvzD7_8ZT8-w0Kl7FiAgddIV6WDy68nPxqKzxRF8Pzgzru9UCWiiZwWIWu_LDbBg8OsRziRQvc1kALTy6-uAByAypdMH?width=800");
+}
+
+.card-datalist {
+  margin-bottom: 16px;
 }
 
 /*# sourceMappingURL=app.css.map */

@@ -8,7 +8,8 @@ const Router = EmberRouter.extend({
 
 Router.map(function () {
   this.route('conferences',  {path:'/'});
-  this.route('people'); 
+  this.route('people');
+  this.route('styles-guide');
 });
 
 export default Router;

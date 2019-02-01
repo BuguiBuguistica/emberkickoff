@@ -1,26 +1,17 @@
 
 @import "@haufe-umantis/styles/people-os/base";
-@import "./components/card";
 
 .wrapper {
   padding: 0 15%;
 }
 
 .tabs {
-  padding: cell(4);
-  margin-bottom:  cell(4); 
-
-  span {
-    padding: 0 cell(2);
-  }
-
   a {
-    padding: 0 cell(2);
-    text-transform: uppercase;
+    padding-bottom: cell(2);
   }
-
   a.active {
-    border-bottom: 2px solid 
+    border-bottom: 2px solid #386F9D;
+    color: #245278;
   }
 }
 
@@ -36,4 +27,8 @@
 
 .default-avatar {
   background-image: url('https://cdn-assets-eu.frontify.com/local/haufe/h_lNxVXLqrDqb2kyrixW3lMmUl7n-aBRzJUzyvzD7_8ZT8-w0Kl7FiAgddIV6WDy68nPxqKzxRF8Pzgzru9UCWiiZwWIWu_LDbBg8OsRziRQvc1kALTy6-uAByAypdMH?width=800');
+}
+
+.card-datalist {
+  margin-bottom: cell(4);
 }

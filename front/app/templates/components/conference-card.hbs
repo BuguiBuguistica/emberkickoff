@@ -1,12 +1,24 @@
-<div class="card">
-  <div>
-    {{item.title}}
-  </div>
-  <div class="card-wrapper">
-    <div class="card-column"><b>Employee:</b> {{item.number_of_employees}}</div>
-    <div class="card-column"><b>Date of conference:</b> {{moment-format item.conference_date "MM-DD-YYYY"}}</div>
-    <div class="card-column"><b>Head of conference:</b> {{item.head_of_opc.first_name}}{{item.head_of_opc.last_name}}</div>
-    <div class="card-column"><b>Responsible HR BP:</b> {{item.responsible_hr.first_name}}{{item.responsible_hr.last_name}}</div>
+<div viewmode="list">
+  <div class="card-datalist">
+    <div class="content">
+      <div class="content__title">{{item.title}}</div>
+      <div class="content__datalist">
+        <ul>
+          <li>
+            <b>Employee</b>
+            {{item.number_of_employees}}
+          </li>
+          <li>
+            <b>Head of conference</b>
+            {{item.head_of_opc.first_name}}{{item.head_of_opc.last_name}}
+          </li>
+          <li>
+            <b>Responsible HR BP</b>
+            {{item.responsible_hr.first_name}}{{item.responsible_hr.last_name}}
+          </li>
+        </ul>
+      </div>
+    </div>
   </div>
 </div>
 {{yield}}
