@@ -1,0 +1,16 @@
+<h1>This is the test ember MODELS</h1>
+<br>
+{{#each model as |book|}}
+  {{book.title}} <br>
+{{/each}}
+
+<br>
+
+<h1>Here the same request but this is not going to the server :)</h1>
+<button {{action "getBooks"}} class="button button--main">Load Books</button>
+<br> <br>
+{{#each books as |book|}}
+  {{book.title}} <br>
+{{/each}}
+
+{{outlet}}

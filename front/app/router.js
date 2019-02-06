@@ -10,6 +10,7 @@ Router.map(function () {
   this.route('conferences',  {path:'/'});
   this.route('people');
   this.route('styles-guide');
+  this.route('book');
 });
 
 export default Router;

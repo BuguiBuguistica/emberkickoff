@@ -4,7 +4,7 @@ export default Route.extend({
   model() {
     return this.get('peopleService').getPeople();
   },
-  setupController(controller, model) {
+ /*  setupController(controller, model) {
     this._super(controller, model);
-  },
+  }, */
 });
